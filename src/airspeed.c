@@ -19,9 +19,7 @@ void gen_airspeed() {
         inner_box_vertices
     );
     
-    glGenBuffers(1, &airspeed_inner_VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, airspeed_inner_VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(inner_box_vertices), inner_box_vertices, GL_STATIC_DRAW);
+    add_to_buffer(&airspeed_inner_VBO, inner_box_vertices, sizeof(inner_box_vertices));
 
     float outer_box_vertices[27];
 
@@ -33,9 +31,7 @@ void gen_airspeed() {
         outer_box_vertices
     );
 
-    glGenBuffers(1, &airspeed_outer_VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, airspeed_outer_VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(outer_box_vertices), outer_box_vertices, GL_STATIC_DRAW);
+    add_to_buffer(&airspeed_outer_VBO, outer_box_vertices, sizeof(outer_box_vertices));
 
     //Lines
 
@@ -50,9 +46,7 @@ void gen_airspeed() {
         rect_vertices
     );
 
-    glGenBuffers(1, &airspeed_line_1_VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, airspeed_line_1_VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(rect_vertices), rect_vertices, GL_STATIC_DRAW);
+    add_to_buffer(&airspeed_line_1_VBO, rect_vertices, sizeof(rect_vertices));
 
     gen_rectangle(
         AIRSPEED_LINE_WIDTH_SMALL,
@@ -63,9 +57,7 @@ void gen_airspeed() {
         rect_vertices
     );
 
-    glGenBuffers(1, &airspeed_line_2_VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, airspeed_line_2_VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(rect_vertices), rect_vertices, GL_STATIC_DRAW);
+    add_to_buffer(&airspeed_line_2_VBO, rect_vertices, sizeof(rect_vertices));
 
     //Pointer
 
@@ -91,179 +83,109 @@ void gen_airspeed() {
         pointer_x4, pointer_y3, 0.0
     };
 
-    glGenBuffers(1, &airspeed_pointer_VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, airspeed_pointer_VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(pointer_vertices), pointer_vertices, GL_STATIC_DRAW);
+    add_to_buffer(&airspeed_pointer_VBO, pointer_vertices, sizeof(pointer_vertices));
 }
 
-void draw_airspeed() {
+void draw_airspeed(float vPosX, float vPosY) {
     //Uniforms
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){
-        -WINDOW_WIDTH/2.0 + AIRSPEED_LEFT_MARGIN,
-        WINDOW_HEIGHT/2.0 - AIRSPEED_TOP_MARGIN,
-        0.0
-    });
+    reset_modelmatrix();
+    set_position(vPosX, vPosY);
 
-    glm_mat4_identity(viewMatrix);
-    glm_mat4_identity(projectionMatrix);
 
-    glUniform4fv(colorLoc,1, (vec4){0.0f,0.0f,0.0f,AIRSPEED_ALPHA});
-    glUniform1i(setBrightnessLoc, 0);
-    glUniform1i(hasTextureLoc, 0);
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-    glUniformMatrix4fv(viewMatrixLoc, 1, GL_FALSE, viewMatrix[0]);
-    glUniformMatrix4fv(projectionMatrixLoc, 1, GL_FALSE, projectionMatrix[0]);
+    set_color((vec4){0.0f,0.0f,0.0f,AIRSPEED_ALPHA});
 
     //Drawing inner box
 
     //Setting stencil
-    glEnable(GL_STENCIL_TEST);
-    glStencilFunc(GL_ALWAYS, 1, 0xFF); // Set any stencil to 1
-    glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
-    glStencilMask(0xFF); // Write to stencil buffer
-    glClear(GL_STENCIL_BUFFER_BIT); // Clear stencil buffer (0 by default)
+    enable_stencil_test();
+    enable_stencil_buffer_changes();
 
-    glBindBuffer(GL_ARRAY_BUFFER, airspeed_inner_VBO);
-   
-    glEnableVertexAttribArray(POS_ATTR);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    draw(airspeed_inner_VBO,6,GL_TRIANGLES);
 
-    glDrawArrays(GL_TRIANGLES, 0, 6);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-    glStencilMask(0x00); // Do not write to stencil buffer
-    
-    glStencilFunc(GL_EQUAL, 1, 0xFF);
+    disable_stencil_buffer_changes();
+    pass_stencil_if_1();
 
     //Drawing unit lines
 
-    float knots = 1.94384449f*speed*1000.0f;
+    //float speed = glm_vec3_distance(pos,prev_pos);
 
-    float box_pos_y = WINDOW_HEIGHT/2.0 - AIRSPEED_TOP_MARGIN;
+    float airspeed = glm_vec3_norm(speed);
+    float knots = 1.94384449f*airspeed*1000;
+
+    //printf("Knots: %0.6f\n",knots);
 
     int num_lines = floor(AIRSPEED_HEIGHT/AIRSPEED_LINE_SPACE_BETWEEN) + 1;
 
     int last_line_index = floor(knots/5.0f) - num_lines/2;
-    float last_line_pos = box_pos_y + 
+    float last_line_pos =
         AIRSPEED_LINE_SPACE_BETWEEN * 
         last_line_index - AIRSPEED_LINE_SPACE_BETWEEN*knots/5.f;
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){
-        -WINDOW_WIDTH/2.0f + AIRSPEED_LEFT_MARGIN + inner_width/2.0f,
-        last_line_pos,
-        0.0
-    });
+    reset_modelmatrix();
+    set_position(
+        vPosX + inner_width/2.0f,
+        vPosY + last_line_pos
+    );
 
     for (int i = last_line_index; i < last_line_index + num_lines; i++) {
         float line_width =
             i%2 == 0 ? AIRSPEED_LINE_WIDTH_BIG : AIRSPEED_LINE_WIDTH_SMALL;
 
-        glm_translate(modelMatrix,(vec3){
-            -line_width/2.0f,
-            0.0,
-            0.0
-        });
+        set_position(-line_width/2.0f, 0.0f);
 
-        glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-        glUniform4fv(colorLoc,1, WHITE);
-        glBindBuffer(GL_ARRAY_BUFFER, i%2 == 0 ? airspeed_line_1_VBO : airspeed_line_2_VBO);
-        glEnableVertexAttribArray(POS_ATTR);
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+        set_color(WHITE);
+        draw(
+            i%2 == 0 ? airspeed_line_1_VBO : airspeed_line_2_VBO,
+            6,GL_TRIANGLES
+        );
 
-        glDrawArrays(GL_TRIANGLES, 0, 6);
-
-        glm_translate(modelMatrix,(vec3){
-            line_width/2.0f,
-            0.0,
-            0.0
-        });
+        set_position(line_width/2.0f, 0.0f);
 
         if (i%2 == 0) {
-            glm_translate(modelMatrix,(vec3){
-                - inner_width/2.0,
-                0.0,
-                0.0
-            });
-            glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-
-            glUniform1i(hasTextureLoc,1);
+            set_position(-inner_width/2, 0.0);
 
             char num_string[100];
             sprintf(num_string, "%d", i*5);
             render_text(num_string,AIRSPEED_NUMBER_SIZE,0);
 
-            glUniform1i(hasTextureLoc,0);
-
-            glm_translate(modelMatrix,(vec3){
-                inner_width/2.0,
-                0.0,
-                0.0
-            });
+            set_position(inner_width/2, 0.0);
         }
 
-        glm_translate(modelMatrix,(vec3){
-            0.0f,
-            AIRSPEED_LINE_SPACE_BETWEEN,
-            0.0f
-        });
+        set_position(0.0f, AIRSPEED_LINE_SPACE_BETWEEN);
     }
 
     //Outer box
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){
-        -WINDOW_WIDTH/2.0 + AIRSPEED_LEFT_MARGIN,
-        WINDOW_HEIGHT/2.0 - AIRSPEED_TOP_MARGIN,
-        0.0
-    });
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
+    reset_modelmatrix();
+    set_position(vPosX, vPosY);
 
-    glStencilFunc(GL_NOTEQUAL, 1, 0xFF); // Pass test if stencil value is 1
-    glStencilOp(GL_ZERO, GL_ZERO, GL_REPLACE); 
+    pass_stencil_if_0();
 
     color[3] = 1.0f;
 
-    glUniform4fv(colorLoc,1, BLACK);
+    set_color(BLACK);
 
-    glBindBuffer(GL_ARRAY_BUFFER, airspeed_outer_VBO);
-    glEnableVertexAttribArray(POS_ATTR);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glDrawArrays(GL_TRIANGLE_FAN, 0, 9);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    draw(airspeed_outer_VBO, 9, GL_TRIANGLE_FAN);
 
-    glDisable(GL_STENCIL_TEST);
+    disable_stencil_test();
 
     //Drawing TAS and GS
 
     float info_margin = AIRSPEED_STROKE_THICKNESS*2;
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){
-        -WINDOW_WIDTH/2.0 + AIRSPEED_LEFT_MARGIN - AIRSPEED_WIDTH/2.0 + info_margin,
-        WINDOW_HEIGHT/2.0 - AIRSPEED_TOP_MARGIN + 
-            AIRSPEED_HEIGHT/2.0 - AIRSPEED_INFO_MARGIN_HEIGHT/2.0 - AIRSPEED_STROKE_THICKNESS,
-        0.0
-    });
+    reset_modelmatrix();
+    set_position(
+        vPosX - AIRSPEED_WIDTH/2.0 + info_margin,
+        vPosY + 
+            AIRSPEED_HEIGHT/2.0 - AIRSPEED_INFO_MARGIN_HEIGHT/2.0 - AIRSPEED_STROKE_THICKNESS
+    );
 
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-    glUniform4fv(colorLoc,1, (vec4){1.0,1.0,1.0,1.0});
-    glUniform1i(hasTextureLoc,1);
+    set_color(WHITE);
 
     render_text("TAS",0.3f,1);
 
-    glm_translate(modelMatrix,(vec3){
-        AIRSPEED_WIDTH - info_margin*2,
-        0.0,
-        0.0
-    });
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
+    set_position(AIRSPEED_WIDTH - info_margin*2, 0.0);
 
     int tas = floor(knots*sqrt(1.225/sl_density));
 
@@ -271,109 +193,66 @@ void draw_airspeed() {
     sprintf(num_string, "%dkt", tas);
     render_text(num_string,AIRSPEED_NUMBER_SIZE, 2);
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){
-        -WINDOW_WIDTH/2.0 + AIRSPEED_LEFT_MARGIN - AIRSPEED_WIDTH/2.0 + info_margin,
-        WINDOW_HEIGHT/2.0 - AIRSPEED_TOP_MARGIN -
-            AIRSPEED_HEIGHT/2.0 + AIRSPEED_INFO_MARGIN_HEIGHT/2.0 + AIRSPEED_STROKE_THICKNESS,
-        0.0
-    });
-
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
+    reset_modelmatrix();
+    set_position(
+        vPosX - AIRSPEED_WIDTH/2.0 + info_margin,
+        vPosY -
+            AIRSPEED_HEIGHT/2.0 + AIRSPEED_INFO_MARGIN_HEIGHT/2.0 + AIRSPEED_STROKE_THICKNESS
+    );
 
     render_text("GS",0.3f,1);
 
-    glm_translate(modelMatrix,(vec3){
-        AIRSPEED_WIDTH - info_margin*2,
-        0.0,
-        0.0
-    });
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
+    set_position(AIRSPEED_WIDTH - info_margin*2,0.0);
 
     sprintf(num_string, "%dkt", (int)floor(knots*cos(rotX)));
     render_text(num_string,AIRSPEED_NUMBER_SIZE, 2);
 
     //Marker
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){
-        -WINDOW_WIDTH/2.0f + AIRSPEED_LEFT_MARGIN + AIRSPEED_WIDTH/2.0,
-        WINDOW_HEIGHT/2.0f - AIRSPEED_TOP_MARGIN,
-        0.0
-    });
+    reset_modelmatrix();
+    set_position(vPosX + AIRSPEED_WIDTH/2.0, vPosY);
 
-    glUniform1i(hasTextureLoc,0);
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-    glUniform4fv(colorLoc,1, (vec4){0.0,0.0,0.0,1.0});
+    set_color(BLACK);
 
-    glBindBuffer(GL_ARRAY_BUFFER, airspeed_pointer_VBO);
-    glEnableVertexAttribArray(POS_ATTR);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glDrawArrays(GL_TRIANGLE_FAN, 0, 8);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    draw(airspeed_pointer_VBO, 8, GL_TRIANGLE_FAN);
 
     //Reduced marker for stroke and stencil
 
-    glm_scale(modelMatrix,(vec3){
+    resize(
         (AIRSPEED_POINTER_WIDTH-AIRSPEED_STROKE_THICKNESS*2)/AIRSPEED_POINTER_WIDTH,
-        (AIRSPEED_POINTER_HEIGHT-AIRSPEED_STROKE_THICKNESS*2)/AIRSPEED_POINTER_HEIGHT,
-        0.0
-    });
+        (AIRSPEED_POINTER_HEIGHT-AIRSPEED_STROKE_THICKNESS*2)/AIRSPEED_POINTER_HEIGHT
+    );
 
     //Setting stencil
 
-    glClearStencil(0);
-    glEnable(GL_STENCIL_TEST);
-    glStencilFunc(GL_ALWAYS, 1, 0xFF); // Set any stencil to 1
-    glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
-    glStencilMask(0xFF); // Write to stencil buffer
-    glClear(GL_STENCIL_BUFFER_BIT); // Clear stencil buffer (0 by default)
+    enable_stencil_test();
+    enable_stencil_buffer_changes();
 
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
 
-    glBindBuffer(GL_ARRAY_BUFFER, airspeed_pointer_VBO);
-    glEnableVertexAttribArray(POS_ATTR);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glDrawArrays(GL_TRIANGLE_FAN, 0, 8);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    draw(airspeed_pointer_VBO, 8, GL_TRIANGLE_FAN);
 
-    glStencilFunc(GL_EQUAL, 1, 0xFF); // Pass test if stencil value is 1
-    glStencilOp(GL_ZERO, GL_ZERO, GL_REPLACE);
+    pass_stencil_if_1();
 
     //Rolling numbers
 
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-    glUniform1i(hasTextureLoc,1);
-    glUniform4fv(colorLoc,1, WHITE);
+    set_color(WHITE);
 
     int curr_digit = (int)floor(knots)%10;
     int next_digit = (curr_digit+1)%10;
     float phase = mod(knots,1.0f);
 
     for (int i = 1; i <= 3; i++) {
-        glm_mat4_identity(modelMatrix);
-        glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-        glm_translate(modelMatrix,(vec3){
-            -WINDOW_WIDTH/2.0f + AIRSPEED_LEFT_MARGIN + AIRSPEED_POINTER_DIGIT_HOR_SPACE*(2 - i),
-            WINDOW_HEIGHT/2.0f - AIRSPEED_TOP_MARGIN - AIRSPEED_POINTER_DIGIT_VERT_SPACE * phase,
-            0.0
-        });
-        glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
+        reset_modelmatrix();
+        set_position(
+            vPosX + AIRSPEED_POINTER_DIGIT_HOR_SPACE*(2 - i),
+            vPosY - AIRSPEED_POINTER_DIGIT_VERT_SPACE * phase
+        );
 
         char digit_char[2];
 
         sprintf(digit_char, "%d", curr_digit);
-
         render_text(digit_char,AIRSPEED_POINTER_DIGIT_SIZE,0);
-
-        glm_translate(modelMatrix,(vec3){
-            0.0,
-            AIRSPEED_POINTER_DIGIT_VERT_SPACE,
-            0.0
-        });
-        glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
+        set_position(0.0, AIRSPEED_POINTER_DIGIT_VERT_SPACE);
 
         sprintf(digit_char, "%d", next_digit);
 
@@ -385,6 +264,5 @@ void draw_airspeed() {
         next_digit = (curr_digit + 1)%10;
     }
 
-    glUniform1i(hasTextureLoc,1);
-    glDisable(GL_STENCIL_TEST);
+    disable_stencil_test();
 }

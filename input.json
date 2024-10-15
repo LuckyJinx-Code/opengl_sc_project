@@ -1,0 +1,9 @@
+{
+    "terrain" : {
+        "vertices_per_square" : 10,
+        "squares_per_chunk" : 30,
+        "chunk_size" : 20,
+        "terrain_diameter" : 7,
+        "mountain_max_height" : 4
+    }
+}

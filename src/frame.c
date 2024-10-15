@@ -51,11 +51,10 @@ void draw_frame() {
     glm_mat4_identity(projectionMatrix);
 
     glUniform4fv(colorLoc,1, SKY_COLOR);
-    glUniform1i(setBrightnessLoc, 0);
     glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
     glUniformMatrix4fv(viewMatrixLoc, 1, GL_FALSE, viewMatrix[0]);
     glUniformMatrix4fv(projectionMatrixLoc, 1, GL_FALSE, projectionMatrix[0]);
-    glUniform1i(hasTextureLoc, 0);
+    glUniform2i(enabledFlagsLoc, 2, enabledFlags[0]);
 
     
     // Stencil

@@ -1,0 +1,287 @@
+{
+    "controllers": [
+        {
+            "parameter": "posX",
+            "easing": "cosinusoid",
+            "first_value": -97194.41228097872,
+            "last_value": -97027.71072396263,
+            "duration": 697.7863999216584,
+            "loop_mode": "restart"
+        },
+        {
+            "parameter": "posY",
+            "easing": "sinusoid",
+            "first_value": 4558.2907956202835,
+            "last_value": 5558.2907956202835,
+            "duration": 100
+        },
+        {
+            "parameter": "posZ",
+            "easing": "sinusoid",
+            "first_value": -99782.42162843703,
+            "last_value": -99615.72007142095,
+            "duration": 697.7863999216584,
+            "loop_mode": "restart"
+        },
+        {
+            "parameter": "rotY",
+            "easing": "linear",
+            "first_value": 0,
+            "last_value": 3.141592653589793,
+            "duration": 697.7863999216584,
+            "loop_mode": "restart"
+        }
+    ],
+    "components": [
+        {
+            "component_name": "Compass",
+            "posX": 509,
+            "posY": -141
+        },
+        {
+            "component_name": "Compass",
+            "posX": 46,
+            "posY": 154
+        },
+        {
+            "component_name": "Compass",
+            "posX": -525,
+            "posY": -180
+        },
+        {
+            "component_name": "Compass",
+            "posX": 385,
+            "posY": 305
+        },
+        {
+            "component_name": "Compass",
+            "posX": -389,
+            "posY": 188
+        },
+        {
+            "component_name": "Compass",
+            "posX": 588,
+            "posY": 398
+        },
+        {
+            "component_name": "Compass",
+            "posX": 316,
+            "posY": -182
+        },
+        {
+            "component_name": "Compass",
+            "posX": -615,
+            "posY": -135
+        },
+        {
+            "component_name": "Compass",
+            "posX": 272,
+            "posY": -241
+        },
+        {
+            "component_name": "Compass",
+            "posX": 519,
+            "posY": 140
+        },
+        {
+            "component_name": "Compass",
+            "posX": 464,
+            "posY": 284
+        },
+        {
+            "component_name": "Compass",
+            "posX": -481,
+            "posY": -133
+        },
+        {
+            "component_name": "Compass",
+            "posX": 592,
+            "posY": 195
+        },
+        {
+            "component_name": "Compass",
+            "posX": 175,
+            "posY": 312
+        },
+        {
+            "component_name": "Compass",
+            "posX": -431,
+            "posY": -249
+        },
+        {
+            "component_name": "Compass",
+            "posX": 202,
+            "posY": -85
+        },
+        {
+            "component_name": "Compass",
+            "posX": -444,
+            "posY": -319
+        },
+        {
+            "component_name": "Compass",
+            "posX": 508,
+            "posY": 318
+        },
+        {
+            "component_name": "Compass",
+            "posX": 465,
+            "posY": 232
+        },
+        {
+            "component_name": "Compass",
+            "posX": -213,
+            "posY": 15
+        },
+        {
+            "component_name": "Compass",
+            "posX": 280,
+            "posY": -317
+        },
+        {
+            "component_name": "Compass",
+            "posX": 470,
+            "posY": -67
+        },
+        {
+            "component_name": "Compass",
+            "posX": 261,
+            "posY": 89
+        },
+        {
+            "component_name": "Compass",
+            "posX": -308,
+            "posY": 166
+        },
+        {
+            "component_name": "Compass",
+            "posX": -594,
+            "posY": -8
+        },
+        {
+            "component_name": "Compass",
+            "posX": -136,
+            "posY": -377
+        },
+        {
+            "component_name": "Compass",
+            "posX": -423,
+            "posY": -212
+        },
+        {
+            "component_name": "Compass",
+            "posX": -613,
+            "posY": -362
+        },
+        {
+            "component_name": "Compass",
+            "posX": 171,
+            "posY": -73
+        },
+        {
+            "component_name": "Compass",
+            "posX": 612,
+            "posY": 230
+        },
+        {
+            "component_name": "Compass",
+            "posX": -9,
+            "posY": -3
+        },
+        {
+            "component_name": "Compass",
+            "posX": 577,
+            "posY": -218
+        },
+        {
+            "component_name": "Compass",
+            "posX": 525,
+            "posY": 275
+        },
+        {
+            "component_name": "Compass",
+            "posX": 321,
+            "posY": 372
+        },
+        {
+            "component_name": "Compass",
+            "posX": -101,
+            "posY": 238
+        },
+        {
+            "component_name": "Compass",
+            "posX": -540,
+            "posY": -184
+        },
+        {
+            "component_name": "Compass",
+            "posX": 458,
+            "posY": 269
+        },
+        {
+            "component_name": "Compass",
+            "posX": 357,
+            "posY": 145
+        },
+        {
+            "component_name": "Compass",
+            "posX": -371,
+            "posY": 128
+        },
+        {
+            "component_name": "Compass",
+            "posX": 379,
+            "posY": 149
+        },
+        {
+            "component_name": "Compass",
+            "posX": -532,
+            "posY": 312
+        },
+        {
+            "component_name": "Compass",
+            "posX": -231,
+            "posY": 23
+        },
+        {
+            "component_name": "Compass",
+            "posX": -222,
+            "posY": 186
+        },
+        {
+            "component_name": "Compass",
+            "posX": -406,
+            "posY": -62
+        },
+        {
+            "component_name": "Compass",
+            "posX": 270,
+            "posY": -135
+        },
+        {
+            "component_name": "Compass",
+            "posX": 436,
+            "posY": 263
+        },
+        {
+            "component_name": "Compass",
+            "posX": 518,
+            "posY": 281
+        },
+        {
+            "component_name": "Compass",
+            "posX": 111,
+            "posY": -34
+        },
+        {
+            "component_name": "Compass",
+            "posX": 186,
+            "posY": 400
+        },
+        {
+            "component_name": "Compass",
+            "posX": -570,
+            "posY": 136
+        }
+    ]
+}

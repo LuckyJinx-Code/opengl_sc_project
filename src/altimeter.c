@@ -19,9 +19,7 @@ void gen_altimeter() {
         inner_box_vertices
     );
     
-    glGenBuffers(1, &altimeter_inner_VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, altimeter_inner_VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(inner_box_vertices), inner_box_vertices, GL_STATIC_DRAW);
+    add_to_buffer(&altimeter_inner_VBO, inner_box_vertices, sizeof(inner_box_vertices));
 
     float outer_box_vertices[27];
 
@@ -33,9 +31,7 @@ void gen_altimeter() {
         outer_box_vertices
     );
 
-    glGenBuffers(1, &altimeter_outer_VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, altimeter_outer_VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(outer_box_vertices), outer_box_vertices, GL_STATIC_DRAW);
+    add_to_buffer(&altimeter_outer_VBO, outer_box_vertices, sizeof(outer_box_vertices));
 
     //Lines
 
@@ -50,9 +46,7 @@ void gen_altimeter() {
         rect_vertices
     );
 
-    glGenBuffers(1, &altimeter_line_1_VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, altimeter_line_1_VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(rect_vertices), rect_vertices, GL_STATIC_DRAW);
+    add_to_buffer(&altimeter_line_1_VBO, rect_vertices, sizeof(rect_vertices));
 
     gen_rectangle(
         ALTIMETER_LINE_WIDTH_SMALL,
@@ -66,6 +60,8 @@ void gen_altimeter() {
     glGenBuffers(1, &altimeter_line_2_VBO);
     glBindBuffer(GL_ARRAY_BUFFER, altimeter_line_2_VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(rect_vertices), rect_vertices, GL_STATIC_DRAW);
+
+    add_to_buffer(&altimeter_line_2_VBO, rect_vertices, sizeof(rect_vertices));
 
     //Pointer
 
@@ -90,187 +86,101 @@ void gen_altimeter() {
         pointer_x2, pointer_y1, 0.0,
         pointer_x1, pointer_y3, 0.0
     };
-
-    glGenBuffers(1, &altimeter_pointer_VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, altimeter_pointer_VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(pointer_vertices), pointer_vertices, GL_STATIC_DRAW);
+    
+    add_to_buffer(&altimeter_pointer_VBO, pointer_vertices, sizeof(pointer_vertices));
 }
 
-void draw_altimeter() {
+void draw_altimeter(float vPosX, float vPosY) {
     //Uniforms
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){
-        WINDOW_WIDTH/2.0 - ALTIMETER_RIGHT_MARGIN,
-        WINDOW_HEIGHT/2.0 - ALTIMETER_TOP_MARGIN,
-        0.0
-    });
+    reset_modelmatrix();
+    set_position(vPosX, vPosY);
 
-    glm_mat4_identity(viewMatrix);
-    glm_mat4_identity(projectionMatrix);
-
-    glUniform4fv(colorLoc,1, (vec4){0.0f,0.0f,0.0f,ALTIMETER_ALPHA});
-    glUniform1i(setBrightnessLoc, 0);
-    glUniform1i(hasTextureLoc, 0);
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-    glUniformMatrix4fv(viewMatrixLoc, 1, GL_FALSE, viewMatrix[0]);
-    glUniformMatrix4fv(projectionMatrixLoc, 1, GL_FALSE, projectionMatrix[0]);
+    set_color((vec4){0.0f,0.0f,0.0f,ALTIMETER_ALPHA});
 
     //Drawing inner box
 
     //Setting stencil
-    glEnable(GL_STENCIL_TEST);
-    glStencilFunc(GL_ALWAYS, 1, 0xFF); // Set any stencil to 1
-    glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
-    glStencilMask(0xFF); // Write to stencil buffer
-    glClear(GL_STENCIL_BUFFER_BIT); // Clear stencil buffer (0 by default)
+    enable_stencil_test();
+    enable_stencil_buffer_changes();
 
     glBindBuffer(GL_ARRAY_BUFFER, altimeter_inner_VBO);
    
-    glEnableVertexAttribArray(POS_ATTR);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-
-    glDrawArrays(GL_TRIANGLES, 0, 6);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    draw(altimeter_inner_VBO, 6, GL_TRIANGLES);
 
     //Drawing unit lines
 
-    glStencilMask(0x00); // Do not write to stencil buffer    
-    glStencilFunc(GL_EQUAL, 1, 0xFF);
+    pass_stencil_if_1();
 
     float inner_width = 
     ALTIMETER_WIDTH - ALTIMETER_STROKE_THICKNESS*2;
 
-    float altitude = posY*1000.0f;
-
-    float box_pos_y = WINDOW_HEIGHT/2.0 - ALTIMETER_TOP_MARGIN;
+    float altitude = pos[1]*1000.0f;
 
     int num_lines = floor(ALTIMETER_HEIGHT/ALTIMETER_LINE_SPACE_BETWEEN) + 1;
     float meters_unit = 100.0f;
 
     int last_line_index = floor(altitude/meters_unit) - num_lines/2;
-    float last_line_pos = box_pos_y + 
+    float last_line_pos = vPosY + 
         ALTIMETER_LINE_SPACE_BETWEEN * 
         last_line_index - ALTIMETER_LINE_SPACE_BETWEEN*altitude/meters_unit;
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){
-        WINDOW_WIDTH/2.0f - ALTIMETER_RIGHT_MARGIN - inner_width/2.0f,
-        last_line_pos,
-        0.0
-    });
+    reset_modelmatrix();
+    set_position(vPosX - inner_width/2.0f, last_line_pos);
+    set_color(WHITE);
 
     for (int i = last_line_index; i < last_line_index + num_lines; i++) {
         float line_width =
             i%2 == 0 ? ALTIMETER_LINE_WIDTH_BIG : ALTIMETER_LINE_WIDTH_SMALL;
 
-        glm_translate(modelMatrix,(vec3){
-            line_width/2.0f,
-            0.0,
-            0.0
-        });
+        set_position(line_width/2.0f, 0.0);
+        draw(i%2 == 0 ? altimeter_line_1_VBO : altimeter_line_2_VBO, 6, GL_TRIANGLES);
 
-        glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-        glUniform4fv(colorLoc,1, WHITE);
-        glBindBuffer(GL_ARRAY_BUFFER, i%2 == 0 ? altimeter_line_1_VBO : altimeter_line_2_VBO);
-        glEnableVertexAttribArray(POS_ATTR);
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-
-        glDrawArrays(GL_TRIANGLES, 0, 6);
-
-        glm_translate(modelMatrix,(vec3){
-            -line_width/2.0f,
-            0.0,
-            0.0
-        });
+        set_position(-line_width/2.0f, 0.0);
 
         if (i%4 == 0) {
-            glm_translate(modelMatrix,(vec3){
-                inner_width/2.0,
-                0.0,
-                0.0
-            });
-            glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-
-            glUniform1i(hasTextureLoc,1);
+            set_position(inner_width/2.0, 0.0);
 
             char num_string[100];
             sprintf(num_string, "%d", i*100);
             render_text(num_string,ALTIMETER_NUMBER_SIZE,0);
 
-            glUniform1i(hasTextureLoc,0);
-
-            glm_translate(modelMatrix,(vec3){
-                -inner_width/2.0,
-                0.0,
-                0.0
-            });
+            set_position(-inner_width/2.0, 0.0f);
         }
 
-        glm_translate(modelMatrix,(vec3){
-            0.0f,
-            ALTIMETER_LINE_SPACE_BETWEEN,
-            0.0f
-        });
+        set_position(0.0f, ALTIMETER_LINE_SPACE_BETWEEN);
     }
 
     //Drawing outer box
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){
-        WINDOW_WIDTH/2.0 - ALTIMETER_RIGHT_MARGIN,
-        WINDOW_HEIGHT/2.0 - ALTIMETER_TOP_MARGIN,
-        0.0
-    });
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
+    reset_modelmatrix();
+    set_position(vPosX, vPosY);
+    pass_stencil_if_0();
+    set_color(BLACK);
+    draw(altimeter_outer_VBO, 9, GL_TRIANGLE_FAN);
 
-    glStencilFunc(GL_NOTEQUAL, 1, 0xFF); // Pass test if stencil value is 1
-    glStencilOp(GL_ZERO, GL_ZERO, GL_REPLACE); 
-
-    color[3] = 1.0f;
-
-    glUniform4fv(colorLoc,1, BLACK);
-    
-    glBindBuffer(GL_ARRAY_BUFFER, altimeter_outer_VBO);
-    glEnableVertexAttribArray(POS_ATTR);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glDrawArrays(GL_TRIANGLE_FAN, 0, 9);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-    glUniform1i(hasTextureLoc,1);
-    glDisable(GL_STENCIL_TEST);
+    disable_stencil_test();
 
     //Drawing ALT and PR
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){
-        WINDOW_WIDTH/2.0 - ALTIMETER_RIGHT_MARGIN,
-        WINDOW_HEIGHT/2.0 - ALTIMETER_TOP_MARGIN + ALTIMETER_HEIGHT/2.0
-            - ALTIMETER_INFO_MARGIN_HEIGHT/2.0 - ALTIMETER_STROKE_THICKNESS,
-        0.0
-    });
+    reset_modelmatrix();
+    set_position(
+        vPosX,
+        vPosY + ALTIMETER_HEIGHT/2.0
+            - ALTIMETER_INFO_MARGIN_HEIGHT/2.0 - ALTIMETER_STROKE_THICKNESS);
 
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-    glUniform4fv(colorLoc,1, (vec4){1.0,1.0,1.0,1.0});
-    glUniform1i(hasTextureLoc,1);
+    set_color(WHITE);
 
     char num_string[100];
     sprintf(num_string, "%dm", (int)floor(altitude));
     render_text(num_string,ALTIMETER_NUMBER_SIZE, 0);
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){
-        WINDOW_WIDTH/2.0 - ALTIMETER_RIGHT_MARGIN,
-        WINDOW_HEIGHT/2.0 - ALTIMETER_TOP_MARGIN -
-            ALTIMETER_HEIGHT/2.0 + ALTIMETER_INFO_MARGIN_HEIGHT/2.0 + ALTIMETER_STROKE_THICKNESS,
-        0.0
-    });
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
+    reset_modelmatrix();
+    set_position(
+        vPosX,
+        vPosY -
+            ALTIMETER_HEIGHT/2.0 + ALTIMETER_INFO_MARGIN_HEIGHT/2.0 + ALTIMETER_STROKE_THICKNESS
+    );
 
     float airPressure = 1013.25f* (1 - (0.0065f*altitude)/288.15f);
 
@@ -279,58 +189,34 @@ void draw_altimeter() {
 
     //Marker
 
-    glUniform1i(hasTextureLoc,0);
+    reset_modelmatrix();
+    set_position(
+        vPosX - ALTIMETER_WIDTH/2.0,
+        vPosY);
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){
-        WINDOW_WIDTH/2.0f - ALTIMETER_RIGHT_MARGIN - ALTIMETER_WIDTH/2.0,
-        WINDOW_HEIGHT/2.0f - ALTIMETER_TOP_MARGIN,
-        0.0
-    });
+    set_color(BLACK);
 
-    glUniform1i(hasTextureLoc,0);
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-    glUniform4fv(colorLoc,1, (vec4){0.0,0.0,0.0,1.0});
-
-    glBindBuffer(GL_ARRAY_BUFFER, altimeter_pointer_VBO);
-    glEnableVertexAttribArray(POS_ATTR);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glDrawArrays(GL_TRIANGLE_FAN, 0, 8);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    draw(altimeter_pointer_VBO, 8, GL_TRIANGLE_FAN);
 
     //Reduced marker for stroke and stencil
 
-    glm_scale(modelMatrix,(vec3){
+    resize(
         (ALTIMETER_POINTER_WIDTH-ALTIMETER_STROKE_THICKNESS*2)/ALTIMETER_POINTER_WIDTH,
-        (ALTIMETER_POINTER_HEIGHT-ALTIMETER_STROKE_THICKNESS*2)/ALTIMETER_POINTER_HEIGHT,
-        0.0
-    });
+        (ALTIMETER_POINTER_HEIGHT-ALTIMETER_STROKE_THICKNESS*2)/ALTIMETER_POINTER_HEIGHT
+    );
 
     //Setting stencil
 
-    glClearStencil(0);
-    glEnable(GL_STENCIL_TEST);
-    glStencilFunc(GL_ALWAYS, 1, 0xFF); // Set any stencil to 1
-    glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
-    glStencilMask(0xFF); // Write to stencil buffer
-    glClear(GL_STENCIL_BUFFER_BIT); // Clear stencil buffer (0 by default)
+    enable_stencil_test();
+    enable_stencil_buffer_changes();
 
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
+    draw(altimeter_pointer_VBO, 8, GL_TRIANGLE_FAN);
 
-    glBindBuffer(GL_ARRAY_BUFFER, altimeter_pointer_VBO);
-    glEnableVertexAttribArray(POS_ATTR);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glDrawArrays(GL_TRIANGLE_FAN, 0, 8);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-    glStencilFunc(GL_EQUAL, 1, 0xFF); // Pass test if stencil value is 1
-    glStencilOp(GL_ZERO, GL_ZERO, GL_REPLACE);
+    pass_stencil_if_1();
 
     //Rolling numbers
     
-    glUniform1i(hasTextureLoc,1);
-    glUniform4fv(colorLoc,1, WHITE);
+    set_color(WHITE);
     
     int altit_unit = (int)floor(altitude/10);
     int curr_digit = altit_unit%10 - altit_unit%2;
@@ -339,8 +225,8 @@ void draw_altimeter() {
     
     //First digit
 
-    float digit_posX = WINDOW_WIDTH/2.0f - ALTIMETER_RIGHT_MARGIN + ALTIMETER_POINTER_DIGIT_HOR_SPACE*2.5f;
-    float digit_posY = WINDOW_HEIGHT/2.0f - ALTIMETER_TOP_MARGIN - ALTIMETER_POINTER_DIGIT_VERT_SPACE * phase;
+    float digit_posX = vPosX + ALTIMETER_POINTER_DIGIT_HOR_SPACE*2.5f;
+    float digit_posY = vPosY - ALTIMETER_POINTER_DIGIT_VERT_SPACE * phase;
 
     reset_modelmatrix();
     set_position(digit_posX, digit_posY);
@@ -381,7 +267,7 @@ void draw_altimeter() {
     phase = 100.0f - mod(altitude,100) <= 20 ? mod(altitude,20.0f)/20.0f : 0.0f;
 
     digit_posX -= ALTIMETER_POINTER_DIGIT_HOR_SPACE;
-    digit_posY = WINDOW_HEIGHT/2.0f - ALTIMETER_TOP_MARGIN - ALTIMETER_POINTER_DIGIT_VERT_SPACE * phase;
+    digit_posY = vPosY - ALTIMETER_POINTER_DIGIT_VERT_SPACE * phase;
 
     reset_modelmatrix();
     set_position(digit_posX, digit_posY);
@@ -406,7 +292,7 @@ void draw_altimeter() {
     phase = 1000.0f - mod(altitude,1000) <= 20 ? mod(altitude,20.0f)/20.0f : 0.0f;
 
     digit_posX -= ALTIMETER_POINTER_DIGIT_HOR_SPACE;
-    digit_posY = WINDOW_HEIGHT/2.0f - ALTIMETER_TOP_MARGIN - ALTIMETER_POINTER_DIGIT_VERT_SPACE * phase;
+    digit_posY = vPosY - ALTIMETER_POINTER_DIGIT_VERT_SPACE * phase;
 
     reset_modelmatrix();
     set_position(digit_posX, digit_posY);
@@ -431,7 +317,7 @@ void draw_altimeter() {
     phase = 10000.0f - mod(altitude,10000) <= 20 ? mod(altitude,20.0f)/20.0f : 0.0f;
 
     digit_posX -= ALTIMETER_POINTER_DIGIT_HOR_SPACE;
-    digit_posY = WINDOW_HEIGHT/2.0f - ALTIMETER_TOP_MARGIN - ALTIMETER_POINTER_DIGIT_VERT_SPACE * phase;
+    digit_posY = vPosY- ALTIMETER_POINTER_DIGIT_VERT_SPACE * phase;
 
     reset_modelmatrix();
     set_position(digit_posX, digit_posY);
@@ -443,6 +329,5 @@ void draw_altimeter() {
     reset_modelmatrix();
     set_position(digit_posX, digit_posY);
 
-    glUniform1i(hasTextureLoc,0);
-    glDisable(GL_STENCIL_TEST);
+    disable_stencil_test();
 }

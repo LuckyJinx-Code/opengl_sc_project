@@ -1,0 +1,30 @@
+#sudo openfortivpn gw.bsc.es:443 -u jpedraja
+#ssh -X jpedraj@192.168.10.27
+#scp opengl_sc_project.zip jpedraj@192.168.10.27:/home/jpedraj
+#git clone https://gitlab.freedesktop.org/freetype/freetype.git
+#../configure --host=aarch64-linux-gnu --enable-static --disable-shared --without-png
+
+
+CC = aarch64-linux-gnu-gcc
+CFLAGS = -Wall -g -I./freetype/include -I./include -I./brotli/include -I./harfbuzz/include
+LIBS = -L./freetype/lib -L./brotli/lib -L./harfbuzz/lib -lfreetype -lbrotlidec -lbrotlicommon -lharfbuzz -lGLESv2 -lEGL -lm $(shell pkg-config --cflags --libs x11) -lz
+TARGET = main
+SRC_DIR = src
+SRC = $(SRC_DIR)/main.c $(SRC_DIR)/esUtil.c $(SRC_DIR)/background.c \
+      $(SRC_DIR)/frame.c $(SRC_DIR)/auxiliar.c $(SRC_DIR)/compass.c \
+      $(SRC_DIR)/SSI.c $(SRC_DIR)/airspeed.c $(SRC_DIR)/altimeter.c \
+      $(SRC_DIR)/VSI.c $(SRC_DIR)/waypoints.c $(SRC_DIR)/text_generator.c \
+      $(SRC_DIR)/misc.c
+
+OBJS = $(SRC:.c=.o)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) $(LIBS) -o $(TARGET)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+.PHONY: clean
+
+clean:
+	rm -f $(OBJS) $(TARGET)

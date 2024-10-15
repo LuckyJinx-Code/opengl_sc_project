@@ -1,0 +1,107 @@
+{
+    "terrain" : {
+        "vertices_per_square" : 10,
+        "squares_per_chunk" : 30,
+        "chunk_size" : 20,
+        "terrain_diameter" : 7,
+        "mountain_max_height" : 4
+    },
+    "controllers" : [
+        {
+            "parameter" : "posX",
+            "easing" : "quadratic",
+            "first_value" : 350,
+            "last_value" : 351,
+            "duration" : 30,
+            "loop_mode" : "endless"
+        },
+        {
+            "parameter" : "posY",
+            "easing" : "linear",
+            "first_value" : 6,
+            "last_value" : 4,
+            "duration" : 10,
+            "loop_mode" : "reverse"
+        },
+        {
+            "parameter" : "posZ",
+            "easing" : "quadratic",
+            "first_value" : 292,
+            "last_value" : 291,
+            "duration" : 30,
+            "loop_mode" : "endless"
+        },
+        {
+            "parameter" : "rotY",
+            "easing" : "sinusoid",
+            "first_value" : 0,
+            "last_value" : 3.14159,
+            "duration" : 5,
+            "loop_mode" : "endless"
+        },
+        {
+            "parameter" : "rotZ",
+            "easing" : "sinusoid",
+            "first_value" : -0.14159,
+            "last_value" : 0.14159,
+            "duration" : 4,
+            "loop_mode" : "endless"
+        }
+    ],
+    "waypoints" : [
+        {
+            "id" : "BCN",
+            "coord_X" : 350.0,
+            "coord_Y" : 290.0,
+            "arrival_time" : 1728052891
+        },
+        {
+            "id" : "TRG",
+            "coord_X" : 349.0,
+            "coord_Y" : 285.0,
+            "arrival_time" : 1728052991
+        }
+    ],
+    "components": [
+        {
+            "component_name": "Airspeed",
+            "posX" : -200,
+            "posY" : 100
+        },
+        {
+            "component_name": "VSI",
+            "posX" : 260,
+            "posY" : 100
+        },
+        {
+            "component_name": "Altimeter",
+            "posX" : 200,
+            "posY" : 100
+        },
+        {
+            "component_name": "Compass",
+            "posX" : 0,
+            "posY" : -265
+        },
+        {
+            "component_name": "SSI",
+            "posX" : 0,
+            "posY" : 100
+        },
+        {
+            "component_name": "Waypoints",
+            "posX" : -250,
+            "posY" : -150
+        },
+        {
+            "component_name": "WaypointInfo",
+            "posX" : 250,
+            "posY" : -150
+        },
+        {
+            "component_name": "CDI",
+            "posX" : 0,
+            "posY" : -265
+        }
+    ]
+}

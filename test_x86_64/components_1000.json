@@ -1,0 +1,5037 @@
+{
+    "controllers": [
+        {
+            "parameter": "posX",
+            "easing": "cosinusoid",
+            "first_value": -88290.7055950562,
+            "last_value": -88257.25756645139,
+            "duration": 143.36535257610996,
+            "loop_mode": "restart"
+        },
+        {
+            "parameter": "posY",
+            "easing": "sinusoid",
+            "first_value": 4165.615114879131,
+            "last_value": 5165.615114879131,
+            "duration": 100
+        },
+        {
+            "parameter": "posZ",
+            "easing": "sinusoid",
+            "first_value": -84712.09110690982,
+            "last_value": -84678.643078305,
+            "duration": 143.36535257610996,
+            "loop_mode": "restart"
+        },
+        {
+            "parameter": "rotY",
+            "easing": "linear",
+            "first_value": 0,
+            "last_value": 3.141592653589793,
+            "duration": 143.36535257610996,
+            "loop_mode": "restart"
+        }
+    ],
+    "components": [
+        {
+            "component_name": "VSI",
+            "posX": 496,
+            "posY": 185
+        },
+        {
+            "component_name": "VSI",
+            "posX": -103,
+            "posY": -20
+        },
+        {
+            "component_name": "VSI",
+            "posX": -111,
+            "posY": -385
+        },
+        {
+            "component_name": "VSI",
+            "posX": -399,
+            "posY": 118
+        },
+        {
+            "component_name": "VSI",
+            "posX": 580,
+            "posY": -44
+        },
+        {
+            "component_name": "VSI",
+            "posX": -412,
+            "posY": -330
+        },
+        {
+            "component_name": "VSI",
+            "posX": 489,
+            "posY": 165
+        },
+        {
+            "component_name": "VSI",
+            "posX": 167,
+            "posY": -196
+        },
+        {
+            "component_name": "VSI",
+            "posX": 252,
+            "posY": -209
+        },
+        {
+            "component_name": "VSI",
+            "posX": 588,
+            "posY": 246
+        },
+        {
+            "component_name": "VSI",
+            "posX": -86,
+            "posY": 342
+        },
+        {
+            "component_name": "VSI",
+            "posX": -437,
+            "posY": -45
+        },
+        {
+            "component_name": "VSI",
+            "posX": -475,
+            "posY": -79
+        },
+        {
+            "component_name": "VSI",
+            "posX": 341,
+            "posY": 299
+        },
+        {
+            "component_name": "VSI",
+            "posX": -40,
+            "posY": -169
+        },
+        {
+            "component_name": "VSI",
+            "posX": -482,
+            "posY": 394
+        },
+        {
+            "component_name": "VSI",
+            "posX": -519,
+            "posY": 115
+        },
+        {
+            "component_name": "VSI",
+            "posX": -83,
+            "posY": 158
+        },
+        {
+            "component_name": "VSI",
+            "posX": -100,
+            "posY": 262
+        },
+        {
+            "component_name": "VSI",
+            "posX": 112,
+            "posY": 264
+        },
+        {
+            "component_name": "VSI",
+            "posX": -482,
+            "posY": 227
+        },
+        {
+            "component_name": "VSI",
+            "posX": -414,
+            "posY": -357
+        },
+        {
+            "component_name": "VSI",
+            "posX": 331,
+            "posY": 236
+        },
+        {
+            "component_name": "VSI",
+            "posX": -266,
+            "posY": 151
+        },
+        {
+            "component_name": "VSI",
+            "posX": 187,
+            "posY": 296
+        },
+        {
+            "component_name": "VSI",
+            "posX": -222,
+            "posY": -263
+        },
+        {
+            "component_name": "VSI",
+            "posX": 94,
+            "posY": 138
+        },
+        {
+            "component_name": "VSI",
+            "posX": -416,
+            "posY": 295
+        },
+        {
+            "component_name": "VSI",
+            "posX": 92,
+            "posY": -393
+        },
+        {
+            "component_name": "VSI",
+            "posX": -103,
+            "posY": -247
+        },
+        {
+            "component_name": "VSI",
+            "posX": -580,
+            "posY": -358
+        },
+        {
+            "component_name": "VSI",
+            "posX": -134,
+            "posY": -6
+        },
+        {
+            "component_name": "VSI",
+            "posX": 496,
+            "posY": -399
+        },
+        {
+            "component_name": "VSI",
+            "posX": 597,
+            "posY": -15
+        },
+        {
+            "component_name": "VSI",
+            "posX": 280,
+            "posY": 40
+        },
+        {
+            "component_name": "VSI",
+            "posX": 235,
+            "posY": -136
+        },
+        {
+            "component_name": "VSI",
+            "posX": 300,
+            "posY": 239
+        },
+        {
+            "component_name": "VSI",
+            "posX": 121,
+            "posY": 105
+        },
+        {
+            "component_name": "VSI",
+            "posX": 446,
+            "posY": -65
+        },
+        {
+            "component_name": "VSI",
+            "posX": -546,
+            "posY": -74
+        },
+        {
+            "component_name": "VSI",
+            "posX": 518,
+            "posY": -215
+        },
+        {
+            "component_name": "VSI",
+            "posX": 291,
+            "posY": -179
+        },
+        {
+            "component_name": "VSI",
+            "posX": -254,
+            "posY": 263
+        },
+        {
+            "component_name": "VSI",
+            "posX": 203,
+            "posY": 247
+        },
+        {
+            "component_name": "VSI",
+            "posX": 32,
+            "posY": -326
+        },
+        {
+            "component_name": "VSI",
+            "posX": 293,
+            "posY": -61
+        },
+        {
+            "component_name": "VSI",
+            "posX": -545,
+            "posY": -332
+        },
+        {
+            "component_name": "VSI",
+            "posX": -255,
+            "posY": 302
+        },
+        {
+            "component_name": "VSI",
+            "posX": -256,
+            "posY": -283
+        },
+        {
+            "component_name": "VSI",
+            "posX": -71,
+            "posY": 196
+        },
+        {
+            "component_name": "VSI",
+            "posX": 507,
+            "posY": -263
+        },
+        {
+            "component_name": "VSI",
+            "posX": -472,
+            "posY": -343
+        },
+        {
+            "component_name": "VSI",
+            "posX": -382,
+            "posY": 243
+        },
+        {
+            "component_name": "VSI",
+            "posX": -559,
+            "posY": -102
+        },
+        {
+            "component_name": "VSI",
+            "posX": 362,
+            "posY": 383
+        },
+        {
+            "component_name": "VSI",
+            "posX": 71,
+            "posY": 21
+        },
+        {
+            "component_name": "VSI",
+            "posX": 374,
+            "posY": 366
+        },
+        {
+            "component_name": "VSI",
+            "posX": -106,
+            "posY": 373
+        },
+        {
+            "component_name": "VSI",
+            "posX": 371,
+            "posY": -30
+        },
+        {
+            "component_name": "VSI",
+            "posX": 300,
+            "posY": 162
+        },
+        {
+            "component_name": "VSI",
+            "posX": -205,
+            "posY": -313
+        },
+        {
+            "component_name": "VSI",
+            "posX": -208,
+            "posY": -31
+        },
+        {
+            "component_name": "VSI",
+            "posX": -268,
+            "posY": 66
+        },
+        {
+            "component_name": "VSI",
+            "posX": -32,
+            "posY": -233
+        },
+        {
+            "component_name": "VSI",
+            "posX": 559,
+            "posY": 95
+        },
+        {
+            "component_name": "VSI",
+            "posX": 198,
+            "posY": -61
+        },
+        {
+            "component_name": "VSI",
+            "posX": 362,
+            "posY": 369
+        },
+        {
+            "component_name": "VSI",
+            "posX": -380,
+            "posY": -60
+        },
+        {
+            "component_name": "VSI",
+            "posX": -206,
+            "posY": -362
+        },
+        {
+            "component_name": "VSI",
+            "posX": -376,
+            "posY": 243
+        },
+        {
+            "component_name": "VSI",
+            "posX": -536,
+            "posY": -284
+        },
+        {
+            "component_name": "VSI",
+            "posX": 581,
+            "posY": 157
+        },
+        {
+            "component_name": "VSI",
+            "posX": -51,
+            "posY": -60
+        },
+        {
+            "component_name": "VSI",
+            "posX": 442,
+            "posY": 189
+        },
+        {
+            "component_name": "VSI",
+            "posX": -74,
+            "posY": -283
+        },
+        {
+            "component_name": "VSI",
+            "posX": -171,
+            "posY": 340
+        },
+        {
+            "component_name": "VSI",
+            "posX": 78,
+            "posY": -341
+        },
+        {
+            "component_name": "VSI",
+            "posX": -434,
+            "posY": -35
+        },
+        {
+            "component_name": "VSI",
+            "posX": 24,
+            "posY": -203
+        },
+        {
+            "component_name": "VSI",
+            "posX": -529,
+            "posY": -79
+        },
+        {
+            "component_name": "VSI",
+            "posX": 576,
+            "posY": 192
+        },
+        {
+            "component_name": "VSI",
+            "posX": 296,
+            "posY": 79
+        },
+        {
+            "component_name": "VSI",
+            "posX": -154,
+            "posY": 345
+        },
+        {
+            "component_name": "VSI",
+            "posX": 230,
+            "posY": 121
+        },
+        {
+            "component_name": "VSI",
+            "posX": -489,
+            "posY": 8
+        },
+        {
+            "component_name": "VSI",
+            "posX": -299,
+            "posY": 83
+        },
+        {
+            "component_name": "VSI",
+            "posX": -74,
+            "posY": 279
+        },
+        {
+            "component_name": "VSI",
+            "posX": -57,
+            "posY": 163
+        },
+        {
+            "component_name": "VSI",
+            "posX": 77,
+            "posY": -243
+        },
+        {
+            "component_name": "VSI",
+            "posX": 425,
+            "posY": -192
+        },
+        {
+            "component_name": "VSI",
+            "posX": 55,
+            "posY": 196
+        },
+        {
+            "component_name": "VSI",
+            "posX": 550,
+            "posY": -16
+        },
+        {
+            "component_name": "VSI",
+            "posX": -441,
+            "posY": -19
+        },
+        {
+            "component_name": "VSI",
+            "posX": 390,
+            "posY": 253
+        },
+        {
+            "component_name": "VSI",
+            "posX": -459,
+            "posY": 185
+        },
+        {
+            "component_name": "VSI",
+            "posX": 18,
+            "posY": 380
+        },
+        {
+            "component_name": "VSI",
+            "posX": 243,
+            "posY": 237
+        },
+        {
+            "component_name": "VSI",
+            "posX": 606,
+            "posY": 372
+        },
+        {
+            "component_name": "VSI",
+            "posX": 244,
+            "posY": 396
+        },
+        {
+            "component_name": "VSI",
+            "posX": -7,
+            "posY": -308
+        },
+        {
+            "component_name": "VSI",
+            "posX": 215,
+            "posY": 36
+        },
+        {
+            "component_name": "VSI",
+            "posX": -29,
+            "posY": 203
+        },
+        {
+            "component_name": "VSI",
+            "posX": -116,
+            "posY": -80
+        },
+        {
+            "component_name": "VSI",
+            "posX": 65,
+            "posY": 131
+        },
+        {
+            "component_name": "VSI",
+            "posX": -407,
+            "posY": -355
+        },
+        {
+            "component_name": "VSI",
+            "posX": 126,
+            "posY": 111
+        },
+        {
+            "component_name": "VSI",
+            "posX": -403,
+            "posY": 244
+        },
+        {
+            "component_name": "VSI",
+            "posX": 281,
+            "posY": -285
+        },
+        {
+            "component_name": "VSI",
+            "posX": 469,
+            "posY": -272
+        },
+        {
+            "component_name": "VSI",
+            "posX": -244,
+            "posY": -330
+        },
+        {
+            "component_name": "VSI",
+            "posX": -18,
+            "posY": 354
+        },
+        {
+            "component_name": "VSI",
+            "posX": 64,
+            "posY": 53
+        },
+        {
+            "component_name": "VSI",
+            "posX": 480,
+            "posY": 104
+        },
+        {
+            "component_name": "VSI",
+            "posX": 342,
+            "posY": -33
+        },
+        {
+            "component_name": "VSI",
+            "posX": 255,
+            "posY": 40
+        },
+        {
+            "component_name": "VSI",
+            "posX": 361,
+            "posY": -30
+        },
+        {
+            "component_name": "VSI",
+            "posX": -215,
+            "posY": 357
+        },
+        {
+            "component_name": "VSI",
+            "posX": -145,
+            "posY": 152
+        },
+        {
+            "component_name": "VSI",
+            "posX": 395,
+            "posY": -42
+        },
+        {
+            "component_name": "VSI",
+            "posX": -203,
+            "posY": -62
+        },
+        {
+            "component_name": "VSI",
+            "posX": 457,
+            "posY": 268
+        },
+        {
+            "component_name": "VSI",
+            "posX": -523,
+            "posY": 128
+        },
+        {
+            "component_name": "VSI",
+            "posX": 72,
+            "posY": -261
+        },
+        {
+            "component_name": "VSI",
+            "posX": 359,
+            "posY": 218
+        },
+        {
+            "component_name": "VSI",
+            "posX": -246,
+            "posY": 96
+        },
+        {
+            "component_name": "VSI",
+            "posX": -514,
+            "posY": 275
+        },
+        {
+            "component_name": "VSI",
+            "posX": 135,
+            "posY": -153
+        },
+        {
+            "component_name": "VSI",
+            "posX": 347,
+            "posY": 191
+        },
+        {
+            "component_name": "VSI",
+            "posX": -309,
+            "posY": -400
+        },
+        {
+            "component_name": "VSI",
+            "posX": 437,
+            "posY": 192
+        },
+        {
+            "component_name": "VSI",
+            "posX": 525,
+            "posY": -221
+        },
+        {
+            "component_name": "VSI",
+            "posX": 219,
+            "posY": -308
+        },
+        {
+            "component_name": "VSI",
+            "posX": 597,
+            "posY": -210
+        },
+        {
+            "component_name": "VSI",
+            "posX": -454,
+            "posY": 275
+        },
+        {
+            "component_name": "VSI",
+            "posX": 513,
+            "posY": -121
+        },
+        {
+            "component_name": "VSI",
+            "posX": -455,
+            "posY": -310
+        },
+        {
+            "component_name": "VSI",
+            "posX": -512,
+            "posY": 344
+        },
+        {
+            "component_name": "VSI",
+            "posX": 453,
+            "posY": 7
+        },
+        {
+            "component_name": "VSI",
+            "posX": -565,
+            "posY": -112
+        },
+        {
+            "component_name": "VSI",
+            "posX": -179,
+            "posY": 284
+        },
+        {
+            "component_name": "VSI",
+            "posX": 533,
+            "posY": -99
+        },
+        {
+            "component_name": "VSI",
+            "posX": -331,
+            "posY": 191
+        },
+        {
+            "component_name": "VSI",
+            "posX": 22,
+            "posY": -73
+        },
+        {
+            "component_name": "VSI",
+            "posX": -398,
+            "posY": -399
+        },
+        {
+            "component_name": "VSI",
+            "posX": -507,
+            "posY": -47
+        },
+        {
+            "component_name": "VSI",
+            "posX": -210,
+            "posY": -170
+        },
+        {
+            "component_name": "VSI",
+            "posX": -312,
+            "posY": 285
+        },
+        {
+            "component_name": "VSI",
+            "posX": 140,
+            "posY": 135
+        },
+        {
+            "component_name": "VSI",
+            "posX": 274,
+            "posY": 122
+        },
+        {
+            "component_name": "VSI",
+            "posX": 564,
+            "posY": 165
+        },
+        {
+            "component_name": "VSI",
+            "posX": -210,
+            "posY": 336
+        },
+        {
+            "component_name": "VSI",
+            "posX": -597,
+            "posY": 237
+        },
+        {
+            "component_name": "VSI",
+            "posX": 367,
+            "posY": -322
+        },
+        {
+            "component_name": "VSI",
+            "posX": -569,
+            "posY": 305
+        },
+        {
+            "component_name": "VSI",
+            "posX": 150,
+            "posY": -163
+        },
+        {
+            "component_name": "VSI",
+            "posX": 283,
+            "posY": 46
+        },
+        {
+            "component_name": "VSI",
+            "posX": -372,
+            "posY": 227
+        },
+        {
+            "component_name": "VSI",
+            "posX": 80,
+            "posY": -127
+        },
+        {
+            "component_name": "VSI",
+            "posX": -474,
+            "posY": 306
+        },
+        {
+            "component_name": "VSI",
+            "posX": -318,
+            "posY": 126
+        },
+        {
+            "component_name": "VSI",
+            "posX": -60,
+            "posY": 179
+        },
+        {
+            "component_name": "VSI",
+            "posX": 6,
+            "posY": 315
+        },
+        {
+            "component_name": "VSI",
+            "posX": 190,
+            "posY": -335
+        },
+        {
+            "component_name": "VSI",
+            "posX": 404,
+            "posY": -197
+        },
+        {
+            "component_name": "VSI",
+            "posX": -194,
+            "posY": -214
+        },
+        {
+            "component_name": "VSI",
+            "posX": 506,
+            "posY": 288
+        },
+        {
+            "component_name": "VSI",
+            "posX": -354,
+            "posY": 175
+        },
+        {
+            "component_name": "VSI",
+            "posX": 107,
+            "posY": 11
+        },
+        {
+            "component_name": "VSI",
+            "posX": -124,
+            "posY": -236
+        },
+        {
+            "component_name": "VSI",
+            "posX": -48,
+            "posY": -14
+        },
+        {
+            "component_name": "VSI",
+            "posX": -436,
+            "posY": -399
+        },
+        {
+            "component_name": "VSI",
+            "posX": 561,
+            "posY": 152
+        },
+        {
+            "component_name": "VSI",
+            "posX": -544,
+            "posY": 356
+        },
+        {
+            "component_name": "VSI",
+            "posX": -411,
+            "posY": 287
+        },
+        {
+            "component_name": "VSI",
+            "posX": 144,
+            "posY": 77
+        },
+        {
+            "component_name": "VSI",
+            "posX": 338,
+            "posY": 282
+        },
+        {
+            "component_name": "VSI",
+            "posX": 221,
+            "posY": 188
+        },
+        {
+            "component_name": "VSI",
+            "posX": -363,
+            "posY": 227
+        },
+        {
+            "component_name": "VSI",
+            "posX": 455,
+            "posY": 225
+        },
+        {
+            "component_name": "VSI",
+            "posX": 79,
+            "posY": 121
+        },
+        {
+            "component_name": "VSI",
+            "posX": 252,
+            "posY": -107
+        },
+        {
+            "component_name": "VSI",
+            "posX": -461,
+            "posY": 214
+        },
+        {
+            "component_name": "VSI",
+            "posX": -53,
+            "posY": 285
+        },
+        {
+            "component_name": "VSI",
+            "posX": 287,
+            "posY": -301
+        },
+        {
+            "component_name": "VSI",
+            "posX": -508,
+            "posY": 75
+        },
+        {
+            "component_name": "VSI",
+            "posX": -4,
+            "posY": -46
+        },
+        {
+            "component_name": "VSI",
+            "posX": -166,
+            "posY": 150
+        },
+        {
+            "component_name": "VSI",
+            "posX": -222,
+            "posY": 230
+        },
+        {
+            "component_name": "VSI",
+            "posX": 311,
+            "posY": -326
+        },
+        {
+            "component_name": "VSI",
+            "posX": -257,
+            "posY": 317
+        },
+        {
+            "component_name": "VSI",
+            "posX": -139,
+            "posY": -93
+        },
+        {
+            "component_name": "VSI",
+            "posX": -433,
+            "posY": -19
+        },
+        {
+            "component_name": "VSI",
+            "posX": 379,
+            "posY": 89
+        },
+        {
+            "component_name": "VSI",
+            "posX": 415,
+            "posY": -275
+        },
+        {
+            "component_name": "VSI",
+            "posX": 32,
+            "posY": -189
+        },
+        {
+            "component_name": "VSI",
+            "posX": -104,
+            "posY": -265
+        },
+        {
+            "component_name": "VSI",
+            "posX": -271,
+            "posY": -346
+        },
+        {
+            "component_name": "VSI",
+            "posX": -554,
+            "posY": -279
+        },
+        {
+            "component_name": "VSI",
+            "posX": 53,
+            "posY": 75
+        },
+        {
+            "component_name": "VSI",
+            "posX": 35,
+            "posY": 345
+        },
+        {
+            "component_name": "VSI",
+            "posX": -362,
+            "posY": -139
+        },
+        {
+            "component_name": "VSI",
+            "posX": 86,
+            "posY": 5
+        },
+        {
+            "component_name": "VSI",
+            "posX": 519,
+            "posY": -141
+        },
+        {
+            "component_name": "VSI",
+            "posX": -484,
+            "posY": 84
+        },
+        {
+            "component_name": "VSI",
+            "posX": 281,
+            "posY": 323
+        },
+        {
+            "component_name": "VSI",
+            "posX": 29,
+            "posY": -63
+        },
+        {
+            "component_name": "VSI",
+            "posX": 295,
+            "posY": -279
+        },
+        {
+            "component_name": "VSI",
+            "posX": -112,
+            "posY": 201
+        },
+        {
+            "component_name": "VSI",
+            "posX": 562,
+            "posY": -374
+        },
+        {
+            "component_name": "VSI",
+            "posX": -568,
+            "posY": -308
+        },
+        {
+            "component_name": "VSI",
+            "posX": 236,
+            "posY": 171
+        },
+        {
+            "component_name": "VSI",
+            "posX": -172,
+            "posY": 179
+        },
+        {
+            "component_name": "VSI",
+            "posX": -229,
+            "posY": 59
+        },
+        {
+            "component_name": "VSI",
+            "posX": -58,
+            "posY": -223
+        },
+        {
+            "component_name": "VSI",
+            "posX": 502,
+            "posY": 16
+        },
+        {
+            "component_name": "VSI",
+            "posX": -166,
+            "posY": -56
+        },
+        {
+            "component_name": "VSI",
+            "posX": -183,
+            "posY": 241
+        },
+        {
+            "component_name": "VSI",
+            "posX": 370,
+            "posY": 141
+        },
+        {
+            "component_name": "VSI",
+            "posX": 619,
+            "posY": -382
+        },
+        {
+            "component_name": "VSI",
+            "posX": -336,
+            "posY": -209
+        },
+        {
+            "component_name": "VSI",
+            "posX": 37,
+            "posY": 282
+        },
+        {
+            "component_name": "VSI",
+            "posX": 501,
+            "posY": -96
+        },
+        {
+            "component_name": "VSI",
+            "posX": 480,
+            "posY": -140
+        },
+        {
+            "component_name": "VSI",
+            "posX": -144,
+            "posY": 102
+        },
+        {
+            "component_name": "VSI",
+            "posX": -34,
+            "posY": -14
+        },
+        {
+            "component_name": "VSI",
+            "posX": 126,
+            "posY": 20
+        },
+        {
+            "component_name": "VSI",
+            "posX": -566,
+            "posY": -1
+        },
+        {
+            "component_name": "VSI",
+            "posX": 446,
+            "posY": 357
+        },
+        {
+            "component_name": "VSI",
+            "posX": -41,
+            "posY": 157
+        },
+        {
+            "component_name": "VSI",
+            "posX": 299,
+            "posY": -58
+        },
+        {
+            "component_name": "VSI",
+            "posX": -522,
+            "posY": 97
+        },
+        {
+            "component_name": "VSI",
+            "posX": 219,
+            "posY": -198
+        },
+        {
+            "component_name": "VSI",
+            "posX": -568,
+            "posY": -294
+        },
+        {
+            "component_name": "VSI",
+            "posX": -452,
+            "posY": 116
+        },
+        {
+            "component_name": "VSI",
+            "posX": -77,
+            "posY": -336
+        },
+        {
+            "component_name": "VSI",
+            "posX": 78,
+            "posY": 240
+        },
+        {
+            "component_name": "VSI",
+            "posX": 80,
+            "posY": -208
+        },
+        {
+            "component_name": "VSI",
+            "posX": -312,
+            "posY": -255
+        },
+        {
+            "component_name": "VSI",
+            "posX": -139,
+            "posY": -243
+        },
+        {
+            "component_name": "VSI",
+            "posX": 184,
+            "posY": 201
+        },
+        {
+            "component_name": "VSI",
+            "posX": 490,
+            "posY": 110
+        },
+        {
+            "component_name": "VSI",
+            "posX": -190,
+            "posY": -248
+        },
+        {
+            "component_name": "VSI",
+            "posX": -297,
+            "posY": -144
+        },
+        {
+            "component_name": "VSI",
+            "posX": -420,
+            "posY": 152
+        },
+        {
+            "component_name": "VSI",
+            "posX": 300,
+            "posY": 101
+        },
+        {
+            "component_name": "VSI",
+            "posX": 568,
+            "posY": 97
+        },
+        {
+            "component_name": "VSI",
+            "posX": 200,
+            "posY": 304
+        },
+        {
+            "component_name": "VSI",
+            "posX": 445,
+            "posY": 107
+        },
+        {
+            "component_name": "VSI",
+            "posX": -430,
+            "posY": -378
+        },
+        {
+            "component_name": "VSI",
+            "posX": -196,
+            "posY": 45
+        },
+        {
+            "component_name": "VSI",
+            "posX": 581,
+            "posY": -142
+        },
+        {
+            "component_name": "VSI",
+            "posX": -471,
+            "posY": -32
+        },
+        {
+            "component_name": "VSI",
+            "posX": -616,
+            "posY": -226
+        },
+        {
+            "component_name": "VSI",
+            "posX": -221,
+            "posY": 66
+        },
+        {
+            "component_name": "VSI",
+            "posX": 92,
+            "posY": 291
+        },
+        {
+            "component_name": "VSI",
+            "posX": 399,
+            "posY": 142
+        },
+        {
+            "component_name": "VSI",
+            "posX": -469,
+            "posY": 145
+        },
+        {
+            "component_name": "VSI",
+            "posX": -240,
+            "posY": 367
+        },
+        {
+            "component_name": "VSI",
+            "posX": -292,
+            "posY": 86
+        },
+        {
+            "component_name": "VSI",
+            "posX": -466,
+            "posY": -174
+        },
+        {
+            "component_name": "VSI",
+            "posX": -241,
+            "posY": -195
+        },
+        {
+            "component_name": "VSI",
+            "posX": -187,
+            "posY": 219
+        },
+        {
+            "component_name": "VSI",
+            "posX": 617,
+            "posY": -100
+        },
+        {
+            "component_name": "VSI",
+            "posX": -237,
+            "posY": -250
+        },
+        {
+            "component_name": "VSI",
+            "posX": -181,
+            "posY": 258
+        },
+        {
+            "component_name": "VSI",
+            "posX": 601,
+            "posY": -208
+        },
+        {
+            "component_name": "VSI",
+            "posX": -332,
+            "posY": -13
+        },
+        {
+            "component_name": "VSI",
+            "posX": 329,
+            "posY": 103
+        },
+        {
+            "component_name": "VSI",
+            "posX": -552,
+            "posY": -175
+        },
+        {
+            "component_name": "VSI",
+            "posX": 539,
+            "posY": -400
+        },
+        {
+            "component_name": "VSI",
+            "posX": -34,
+            "posY": -179
+        },
+        {
+            "component_name": "VSI",
+            "posX": 279,
+            "posY": -144
+        },
+        {
+            "component_name": "VSI",
+            "posX": 515,
+            "posY": -322
+        },
+        {
+            "component_name": "VSI",
+            "posX": 173,
+            "posY": 264
+        },
+        {
+            "component_name": "VSI",
+            "posX": -283,
+            "posY": -74
+        },
+        {
+            "component_name": "VSI",
+            "posX": 26,
+            "posY": -22
+        },
+        {
+            "component_name": "VSI",
+            "posX": 350,
+            "posY": 286
+        },
+        {
+            "component_name": "VSI",
+            "posX": -367,
+            "posY": -325
+        },
+        {
+            "component_name": "VSI",
+            "posX": 35,
+            "posY": 365
+        },
+        {
+            "component_name": "VSI",
+            "posX": -73,
+            "posY": -292
+        },
+        {
+            "component_name": "VSI",
+            "posX": 528,
+            "posY": 180
+        },
+        {
+            "component_name": "VSI",
+            "posX": -43,
+            "posY": 243
+        },
+        {
+            "component_name": "VSI",
+            "posX": 5,
+            "posY": 309
+        },
+        {
+            "component_name": "VSI",
+            "posX": 22,
+            "posY": -31
+        },
+        {
+            "component_name": "VSI",
+            "posX": 541,
+            "posY": -30
+        },
+        {
+            "component_name": "VSI",
+            "posX": 598,
+            "posY": -28
+        },
+        {
+            "component_name": "VSI",
+            "posX": -554,
+            "posY": -51
+        },
+        {
+            "component_name": "VSI",
+            "posX": 387,
+            "posY": 4
+        },
+        {
+            "component_name": "VSI",
+            "posX": -37,
+            "posY": -127
+        },
+        {
+            "component_name": "VSI",
+            "posX": 536,
+            "posY": -299
+        },
+        {
+            "component_name": "VSI",
+            "posX": -207,
+            "posY": -341
+        },
+        {
+            "component_name": "VSI",
+            "posX": -239,
+            "posY": -250
+        },
+        {
+            "component_name": "VSI",
+            "posX": -66,
+            "posY": -304
+        },
+        {
+            "component_name": "VSI",
+            "posX": 146,
+            "posY": 318
+        },
+        {
+            "component_name": "VSI",
+            "posX": -493,
+            "posY": 256
+        },
+        {
+            "component_name": "VSI",
+            "posX": -405,
+            "posY": -24
+        },
+        {
+            "component_name": "VSI",
+            "posX": -223,
+            "posY": 353
+        },
+        {
+            "component_name": "VSI",
+            "posX": 462,
+            "posY": 233
+        },
+        {
+            "component_name": "VSI",
+            "posX": -597,
+            "posY": 93
+        },
+        {
+            "component_name": "VSI",
+            "posX": -562,
+            "posY": 389
+        },
+        {
+            "component_name": "VSI",
+            "posX": -452,
+            "posY": -364
+        },
+        {
+            "component_name": "VSI",
+            "posX": -404,
+            "posY": -319
+        },
+        {
+            "component_name": "VSI",
+            "posX": -351,
+            "posY": -58
+        },
+        {
+            "component_name": "VSI",
+            "posX": 92,
+            "posY": 55
+        },
+        {
+            "component_name": "VSI",
+            "posX": 429,
+            "posY": -194
+        },
+        {
+            "component_name": "VSI",
+            "posX": -145,
+            "posY": 127
+        },
+        {
+            "component_name": "VSI",
+            "posX": 427,
+            "posY": -261
+        },
+        {
+            "component_name": "VSI",
+            "posX": -536,
+            "posY": 18
+        },
+        {
+            "component_name": "VSI",
+            "posX": 343,
+            "posY": 21
+        },
+        {
+            "component_name": "VSI",
+            "posX": 47,
+            "posY": -322
+        },
+        {
+            "component_name": "VSI",
+            "posX": -342,
+            "posY": -149
+        },
+        {
+            "component_name": "VSI",
+            "posX": 29,
+            "posY": -69
+        },
+        {
+            "component_name": "VSI",
+            "posX": -525,
+            "posY": -339
+        },
+        {
+            "component_name": "VSI",
+            "posX": 349,
+            "posY": -208
+        },
+        {
+            "component_name": "VSI",
+            "posX": 349,
+            "posY": -254
+        },
+        {
+            "component_name": "VSI",
+            "posX": -126,
+            "posY": 363
+        },
+        {
+            "component_name": "VSI",
+            "posX": 142,
+            "posY": 91
+        },
+        {
+            "component_name": "VSI",
+            "posX": 486,
+            "posY": 53
+        },
+        {
+            "component_name": "VSI",
+            "posX": 50,
+            "posY": -358
+        },
+        {
+            "component_name": "VSI",
+            "posX": 480,
+            "posY": -107
+        },
+        {
+            "component_name": "VSI",
+            "posX": 115,
+            "posY": -162
+        },
+        {
+            "component_name": "VSI",
+            "posX": 139,
+            "posY": -89
+        },
+        {
+            "component_name": "VSI",
+            "posX": 387,
+            "posY": 344
+        },
+        {
+            "component_name": "VSI",
+            "posX": 470,
+            "posY": 27
+        },
+        {
+            "component_name": "VSI",
+            "posX": 49,
+            "posY": -333
+        },
+        {
+            "component_name": "VSI",
+            "posX": 340,
+            "posY": 388
+        },
+        {
+            "component_name": "VSI",
+            "posX": 1,
+            "posY": 15
+        },
+        {
+            "component_name": "VSI",
+            "posX": 473,
+            "posY": 111
+        },
+        {
+            "component_name": "VSI",
+            "posX": -177,
+            "posY": 247
+        },
+        {
+            "component_name": "VSI",
+            "posX": 585,
+            "posY": 186
+        },
+        {
+            "component_name": "VSI",
+            "posX": 456,
+            "posY": 181
+        },
+        {
+            "component_name": "VSI",
+            "posX": 302,
+            "posY": 361
+        },
+        {
+            "component_name": "VSI",
+            "posX": 607,
+            "posY": -44
+        },
+        {
+            "component_name": "VSI",
+            "posX": -306,
+            "posY": 197
+        },
+        {
+            "component_name": "VSI",
+            "posX": 113,
+            "posY": -223
+        },
+        {
+            "component_name": "VSI",
+            "posX": 444,
+            "posY": -400
+        },
+        {
+            "component_name": "VSI",
+            "posX": 331,
+            "posY": 302
+        },
+        {
+            "component_name": "VSI",
+            "posX": -136,
+            "posY": -371
+        },
+        {
+            "component_name": "VSI",
+            "posX": 28,
+            "posY": 297
+        },
+        {
+            "component_name": "VSI",
+            "posX": 160,
+            "posY": 131
+        },
+        {
+            "component_name": "VSI",
+            "posX": 233,
+            "posY": 183
+        },
+        {
+            "component_name": "VSI",
+            "posX": 194,
+            "posY": 365
+        },
+        {
+            "component_name": "VSI",
+            "posX": 334,
+            "posY": 387
+        },
+        {
+            "component_name": "VSI",
+            "posX": -602,
+            "posY": -62
+        },
+        {
+            "component_name": "VSI",
+            "posX": 553,
+            "posY": -16
+        },
+        {
+            "component_name": "VSI",
+            "posX": 176,
+            "posY": 297
+        },
+        {
+            "component_name": "VSI",
+            "posX": 536,
+            "posY": 188
+        },
+        {
+            "component_name": "VSI",
+            "posX": -178,
+            "posY": 289
+        },
+        {
+            "component_name": "VSI",
+            "posX": 344,
+            "posY": 376
+        },
+        {
+            "component_name": "VSI",
+            "posX": 233,
+            "posY": 86
+        },
+        {
+            "component_name": "VSI",
+            "posX": -437,
+            "posY": -173
+        },
+        {
+            "component_name": "VSI",
+            "posX": 545,
+            "posY": 371
+        },
+        {
+            "component_name": "VSI",
+            "posX": -218,
+            "posY": 134
+        },
+        {
+            "component_name": "VSI",
+            "posX": 179,
+            "posY": -162
+        },
+        {
+            "component_name": "VSI",
+            "posX": 623,
+            "posY": -375
+        },
+        {
+            "component_name": "VSI",
+            "posX": 563,
+            "posY": 70
+        },
+        {
+            "component_name": "VSI",
+            "posX": -589,
+            "posY": 321
+        },
+        {
+            "component_name": "VSI",
+            "posX": 496,
+            "posY": -67
+        },
+        {
+            "component_name": "VSI",
+            "posX": -180,
+            "posY": 125
+        },
+        {
+            "component_name": "VSI",
+            "posX": -311,
+            "posY": 160
+        },
+        {
+            "component_name": "VSI",
+            "posX": -413,
+            "posY": -205
+        },
+        {
+            "component_name": "VSI",
+            "posX": 150,
+            "posY": -81
+        },
+        {
+            "component_name": "VSI",
+            "posX": 283,
+            "posY": 366
+        },
+        {
+            "component_name": "VSI",
+            "posX": -522,
+            "posY": -161
+        },
+        {
+            "component_name": "VSI",
+            "posX": -223,
+            "posY": 69
+        },
+        {
+            "component_name": "VSI",
+            "posX": 390,
+            "posY": 169
+        },
+        {
+            "component_name": "VSI",
+            "posX": -422,
+            "posY": 365
+        },
+        {
+            "component_name": "VSI",
+            "posX": 306,
+            "posY": -89
+        },
+        {
+            "component_name": "VSI",
+            "posX": -469,
+            "posY": 359
+        },
+        {
+            "component_name": "VSI",
+            "posX": 580,
+            "posY": -202
+        },
+        {
+            "component_name": "VSI",
+            "posX": -331,
+            "posY": 95
+        },
+        {
+            "component_name": "VSI",
+            "posX": 346,
+            "posY": 48
+        },
+        {
+            "component_name": "VSI",
+            "posX": 388,
+            "posY": -96
+        },
+        {
+            "component_name": "VSI",
+            "posX": 608,
+            "posY": 181
+        },
+        {
+            "component_name": "VSI",
+            "posX": -440,
+            "posY": -119
+        },
+        {
+            "component_name": "VSI",
+            "posX": 231,
+            "posY": -152
+        },
+        {
+            "component_name": "VSI",
+            "posX": -97,
+            "posY": 182
+        },
+        {
+            "component_name": "VSI",
+            "posX": 532,
+            "posY": -126
+        },
+        {
+            "component_name": "VSI",
+            "posX": -35,
+            "posY": 79
+        },
+        {
+            "component_name": "VSI",
+            "posX": -450,
+            "posY": 120
+        },
+        {
+            "component_name": "VSI",
+            "posX": -498,
+            "posY": 32
+        },
+        {
+            "component_name": "VSI",
+            "posX": -552,
+            "posY": -207
+        },
+        {
+            "component_name": "VSI",
+            "posX": -232,
+            "posY": 85
+        },
+        {
+            "component_name": "VSI",
+            "posX": -479,
+            "posY": -310
+        },
+        {
+            "component_name": "VSI",
+            "posX": 117,
+            "posY": 310
+        },
+        {
+            "component_name": "VSI",
+            "posX": -416,
+            "posY": -207
+        },
+        {
+            "component_name": "VSI",
+            "posX": 223,
+            "posY": -155
+        },
+        {
+            "component_name": "VSI",
+            "posX": 334,
+            "posY": -353
+        },
+        {
+            "component_name": "VSI",
+            "posX": -565,
+            "posY": 321
+        },
+        {
+            "component_name": "VSI",
+            "posX": 333,
+            "posY": 324
+        },
+        {
+            "component_name": "VSI",
+            "posX": -189,
+            "posY": 210
+        },
+        {
+            "component_name": "VSI",
+            "posX": -354,
+            "posY": 294
+        },
+        {
+            "component_name": "VSI",
+            "posX": 209,
+            "posY": -258
+        },
+        {
+            "component_name": "VSI",
+            "posX": -441,
+            "posY": 325
+        },
+        {
+            "component_name": "VSI",
+            "posX": 11,
+            "posY": 143
+        },
+        {
+            "component_name": "VSI",
+            "posX": 293,
+            "posY": 224
+        },
+        {
+            "component_name": "VSI",
+            "posX": 21,
+            "posY": 41
+        },
+        {
+            "component_name": "VSI",
+            "posX": -147,
+            "posY": -303
+        },
+        {
+            "component_name": "VSI",
+            "posX": 124,
+            "posY": -315
+        },
+        {
+            "component_name": "VSI",
+            "posX": 435,
+            "posY": 53
+        },
+        {
+            "component_name": "VSI",
+            "posX": 385,
+            "posY": -49
+        },
+        {
+            "component_name": "VSI",
+            "posX": 467,
+            "posY": -82
+        },
+        {
+            "component_name": "VSI",
+            "posX": 6,
+            "posY": -308
+        },
+        {
+            "component_name": "VSI",
+            "posX": -326,
+            "posY": 391
+        },
+        {
+            "component_name": "VSI",
+            "posX": -482,
+            "posY": -193
+        },
+        {
+            "component_name": "VSI",
+            "posX": 293,
+            "posY": -177
+        },
+        {
+            "component_name": "VSI",
+            "posX": 579,
+            "posY": 339
+        },
+        {
+            "component_name": "VSI",
+            "posX": 195,
+            "posY": -1
+        },
+        {
+            "component_name": "VSI",
+            "posX": 10,
+            "posY": 10
+        },
+        {
+            "component_name": "VSI",
+            "posX": -120,
+            "posY": 269
+        },
+        {
+            "component_name": "VSI",
+            "posX": -585,
+            "posY": -55
+        },
+        {
+            "component_name": "VSI",
+            "posX": 238,
+            "posY": -261
+        },
+        {
+            "component_name": "VSI",
+            "posX": -531,
+            "posY": 79
+        },
+        {
+            "component_name": "VSI",
+            "posX": 70,
+            "posY": 346
+        },
+        {
+            "component_name": "VSI",
+            "posX": 42,
+            "posY": -168
+        },
+        {
+            "component_name": "VSI",
+            "posX": 36,
+            "posY": -52
+        },
+        {
+            "component_name": "VSI",
+            "posX": 413,
+            "posY": -121
+        },
+        {
+            "component_name": "VSI",
+            "posX": -163,
+            "posY": -376
+        },
+        {
+            "component_name": "VSI",
+            "posX": 483,
+            "posY": 317
+        },
+        {
+            "component_name": "VSI",
+            "posX": 213,
+            "posY": 339
+        },
+        {
+            "component_name": "VSI",
+            "posX": -305,
+            "posY": -120
+        },
+        {
+            "component_name": "VSI",
+            "posX": -22,
+            "posY": 128
+        },
+        {
+            "component_name": "VSI",
+            "posX": -63,
+            "posY": 327
+        },
+        {
+            "component_name": "VSI",
+            "posX": -367,
+            "posY": 348
+        },
+        {
+            "component_name": "VSI",
+            "posX": 179,
+            "posY": -12
+        },
+        {
+            "component_name": "VSI",
+            "posX": 262,
+            "posY": -362
+        },
+        {
+            "component_name": "VSI",
+            "posX": 145,
+            "posY": 158
+        },
+        {
+            "component_name": "VSI",
+            "posX": 101,
+            "posY": 294
+        },
+        {
+            "component_name": "VSI",
+            "posX": -127,
+            "posY": -192
+        },
+        {
+            "component_name": "VSI",
+            "posX": -451,
+            "posY": -277
+        },
+        {
+            "component_name": "VSI",
+            "posX": -200,
+            "posY": -346
+        },
+        {
+            "component_name": "VSI",
+            "posX": -171,
+            "posY": -319
+        },
+        {
+            "component_name": "VSI",
+            "posX": -96,
+            "posY": 33
+        },
+        {
+            "component_name": "VSI",
+            "posX": -276,
+            "posY": -323
+        },
+        {
+            "component_name": "VSI",
+            "posX": -344,
+            "posY": -142
+        },
+        {
+            "component_name": "VSI",
+            "posX": -557,
+            "posY": 77
+        },
+        {
+            "component_name": "VSI",
+            "posX": 122,
+            "posY": -329
+        },
+        {
+            "component_name": "VSI",
+            "posX": 103,
+            "posY": -209
+        },
+        {
+            "component_name": "VSI",
+            "posX": -100,
+            "posY": -6
+        },
+        {
+            "component_name": "VSI",
+            "posX": 103,
+            "posY": 13
+        },
+        {
+            "component_name": "VSI",
+            "posX": 352,
+            "posY": 99
+        },
+        {
+            "component_name": "VSI",
+            "posX": -83,
+            "posY": 313
+        },
+        {
+            "component_name": "VSI",
+            "posX": -442,
+            "posY": -133
+        },
+        {
+            "component_name": "VSI",
+            "posX": 597,
+            "posY": 153
+        },
+        {
+            "component_name": "VSI",
+            "posX": 589,
+            "posY": -269
+        },
+        {
+            "component_name": "VSI",
+            "posX": 472,
+            "posY": 376
+        },
+        {
+            "component_name": "VSI",
+            "posX": 597,
+            "posY": -158
+        },
+        {
+            "component_name": "VSI",
+            "posX": -527,
+            "posY": -175
+        },
+        {
+            "component_name": "VSI",
+            "posX": -152,
+            "posY": -82
+        },
+        {
+            "component_name": "VSI",
+            "posX": -88,
+            "posY": -92
+        },
+        {
+            "component_name": "VSI",
+            "posX": 464,
+            "posY": 270
+        },
+        {
+            "component_name": "VSI",
+            "posX": -440,
+            "posY": 329
+        },
+        {
+            "component_name": "VSI",
+            "posX": -508,
+            "posY": -377
+        },
+        {
+            "component_name": "VSI",
+            "posX": 123,
+            "posY": -130
+        },
+        {
+            "component_name": "VSI",
+            "posX": -41,
+            "posY": -332
+        },
+        {
+            "component_name": "VSI",
+            "posX": -571,
+            "posY": 5
+        },
+        {
+            "component_name": "VSI",
+            "posX": -88,
+            "posY": 336
+        },
+        {
+            "component_name": "VSI",
+            "posX": -563,
+            "posY": -152
+        },
+        {
+            "component_name": "VSI",
+            "posX": 121,
+            "posY": 307
+        },
+        {
+            "component_name": "VSI",
+            "posX": 311,
+            "posY": -382
+        },
+        {
+            "component_name": "VSI",
+            "posX": 73,
+            "posY": -234
+        },
+        {
+            "component_name": "VSI",
+            "posX": -297,
+            "posY": 309
+        },
+        {
+            "component_name": "VSI",
+            "posX": -503,
+            "posY": -40
+        },
+        {
+            "component_name": "VSI",
+            "posX": 86,
+            "posY": -364
+        },
+        {
+            "component_name": "VSI",
+            "posX": 331,
+            "posY": -27
+        },
+        {
+            "component_name": "VSI",
+            "posX": -454,
+            "posY": -51
+        },
+        {
+            "component_name": "VSI",
+            "posX": 306,
+            "posY": 39
+        },
+        {
+            "component_name": "VSI",
+            "posX": 307,
+            "posY": 2
+        },
+        {
+            "component_name": "VSI",
+            "posX": 180,
+            "posY": -156
+        },
+        {
+            "component_name": "VSI",
+            "posX": -3,
+            "posY": -283
+        },
+        {
+            "component_name": "VSI",
+            "posX": -604,
+            "posY": 191
+        },
+        {
+            "component_name": "VSI",
+            "posX": -167,
+            "posY": 210
+        },
+        {
+            "component_name": "VSI",
+            "posX": -544,
+            "posY": 0
+        },
+        {
+            "component_name": "VSI",
+            "posX": -337,
+            "posY": -344
+        },
+        {
+            "component_name": "VSI",
+            "posX": 147,
+            "posY": 333
+        },
+        {
+            "component_name": "VSI",
+            "posX": -8,
+            "posY": -43
+        },
+        {
+            "component_name": "VSI",
+            "posX": -176,
+            "posY": -195
+        },
+        {
+            "component_name": "VSI",
+            "posX": -368,
+            "posY": 343
+        },
+        {
+            "component_name": "VSI",
+            "posX": 266,
+            "posY": -258
+        },
+        {
+            "component_name": "VSI",
+            "posX": -156,
+            "posY": -131
+        },
+        {
+            "component_name": "VSI",
+            "posX": -551,
+            "posY": -8
+        },
+        {
+            "component_name": "VSI",
+            "posX": -146,
+            "posY": -110
+        },
+        {
+            "component_name": "VSI",
+            "posX": 102,
+            "posY": -295
+        },
+        {
+            "component_name": "VSI",
+            "posX": 109,
+            "posY": -109
+        },
+        {
+            "component_name": "VSI",
+            "posX": 603,
+            "posY": 339
+        },
+        {
+            "component_name": "VSI",
+            "posX": -338,
+            "posY": 253
+        },
+        {
+            "component_name": "VSI",
+            "posX": 281,
+            "posY": -253
+        },
+        {
+            "component_name": "VSI",
+            "posX": -608,
+            "posY": 168
+        },
+        {
+            "component_name": "VSI",
+            "posX": 247,
+            "posY": -145
+        },
+        {
+            "component_name": "VSI",
+            "posX": -107,
+            "posY": -399
+        },
+        {
+            "component_name": "VSI",
+            "posX": 57,
+            "posY": 6
+        },
+        {
+            "component_name": "VSI",
+            "posX": -112,
+            "posY": 101
+        },
+        {
+            "component_name": "VSI",
+            "posX": 369,
+            "posY": -86
+        },
+        {
+            "component_name": "VSI",
+            "posX": -12,
+            "posY": 5
+        },
+        {
+            "component_name": "VSI",
+            "posX": 264,
+            "posY": -374
+        },
+        {
+            "component_name": "VSI",
+            "posX": -68,
+            "posY": -1
+        },
+        {
+            "component_name": "VSI",
+            "posX": 100,
+            "posY": 209
+        },
+        {
+            "component_name": "VSI",
+            "posX": 521,
+            "posY": 32
+        },
+        {
+            "component_name": "VSI",
+            "posX": 28,
+            "posY": -220
+        },
+        {
+            "component_name": "VSI",
+            "posX": -613,
+            "posY": 305
+        },
+        {
+            "component_name": "VSI",
+            "posX": 60,
+            "posY": 192
+        },
+        {
+            "component_name": "VSI",
+            "posX": -461,
+            "posY": 200
+        },
+        {
+            "component_name": "VSI",
+            "posX": -520,
+            "posY": -254
+        },
+        {
+            "component_name": "VSI",
+            "posX": 295,
+            "posY": -197
+        },
+        {
+            "component_name": "VSI",
+            "posX": -452,
+            "posY": 120
+        },
+        {
+            "component_name": "VSI",
+            "posX": -430,
+            "posY": -82
+        },
+        {
+            "component_name": "VSI",
+            "posX": -434,
+            "posY": 221
+        },
+        {
+            "component_name": "VSI",
+            "posX": -291,
+            "posY": 66
+        },
+        {
+            "component_name": "VSI",
+            "posX": 448,
+            "posY": 80
+        },
+        {
+            "component_name": "VSI",
+            "posX": -427,
+            "posY": 96
+        },
+        {
+            "component_name": "VSI",
+            "posX": 175,
+            "posY": 70
+        },
+        {
+            "component_name": "VSI",
+            "posX": -210,
+            "posY": 352
+        },
+        {
+            "component_name": "VSI",
+            "posX": 604,
+            "posY": 350
+        },
+        {
+            "component_name": "VSI",
+            "posX": -273,
+            "posY": 394
+        },
+        {
+            "component_name": "VSI",
+            "posX": 539,
+            "posY": -122
+        },
+        {
+            "component_name": "VSI",
+            "posX": -471,
+            "posY": -106
+        },
+        {
+            "component_name": "VSI",
+            "posX": 264,
+            "posY": -274
+        },
+        {
+            "component_name": "VSI",
+            "posX": -329,
+            "posY": -355
+        },
+        {
+            "component_name": "VSI",
+            "posX": 32,
+            "posY": 63
+        },
+        {
+            "component_name": "VSI",
+            "posX": 261,
+            "posY": -105
+        },
+        {
+            "component_name": "VSI",
+            "posX": -266,
+            "posY": 344
+        },
+        {
+            "component_name": "VSI",
+            "posX": -99,
+            "posY": 73
+        },
+        {
+            "component_name": "VSI",
+            "posX": -619,
+            "posY": 289
+        },
+        {
+            "component_name": "VSI",
+            "posX": -134,
+            "posY": 34
+        },
+        {
+            "component_name": "VSI",
+            "posX": 453,
+            "posY": 12
+        },
+        {
+            "component_name": "VSI",
+            "posX": -92,
+            "posY": -138
+        },
+        {
+            "component_name": "VSI",
+            "posX": 71,
+            "posY": 125
+        },
+        {
+            "component_name": "VSI",
+            "posX": 473,
+            "posY": 209
+        },
+        {
+            "component_name": "VSI",
+            "posX": -273,
+            "posY": -260
+        },
+        {
+            "component_name": "VSI",
+            "posX": -484,
+            "posY": -120
+        },
+        {
+            "component_name": "VSI",
+            "posX": -38,
+            "posY": -101
+        },
+        {
+            "component_name": "VSI",
+            "posX": -568,
+            "posY": 130
+        },
+        {
+            "component_name": "VSI",
+            "posX": -301,
+            "posY": -143
+        },
+        {
+            "component_name": "VSI",
+            "posX": -9,
+            "posY": -88
+        },
+        {
+            "component_name": "VSI",
+            "posX": -249,
+            "posY": 170
+        },
+        {
+            "component_name": "VSI",
+            "posX": -348,
+            "posY": -253
+        },
+        {
+            "component_name": "VSI",
+            "posX": -477,
+            "posY": 252
+        },
+        {
+            "component_name": "VSI",
+            "posX": 169,
+            "posY": -78
+        },
+        {
+            "component_name": "VSI",
+            "posX": -232,
+            "posY": -315
+        },
+        {
+            "component_name": "VSI",
+            "posX": 18,
+            "posY": -193
+        },
+        {
+            "component_name": "VSI",
+            "posX": 271,
+            "posY": -279
+        },
+        {
+            "component_name": "VSI",
+            "posX": 317,
+            "posY": -212
+        },
+        {
+            "component_name": "VSI",
+            "posX": -320,
+            "posY": 19
+        },
+        {
+            "component_name": "VSI",
+            "posX": 605,
+            "posY": -165
+        },
+        {
+            "component_name": "VSI",
+            "posX": 584,
+            "posY": 283
+        },
+        {
+            "component_name": "VSI",
+            "posX": 492,
+            "posY": -400
+        },
+        {
+            "component_name": "VSI",
+            "posX": 387,
+            "posY": 336
+        },
+        {
+            "component_name": "VSI",
+            "posX": 616,
+            "posY": -37
+        },
+        {
+            "component_name": "VSI",
+            "posX": -283,
+            "posY": 395
+        },
+        {
+            "component_name": "VSI",
+            "posX": -168,
+            "posY": -162
+        },
+        {
+            "component_name": "VSI",
+            "posX": 514,
+            "posY": -351
+        },
+        {
+            "component_name": "VSI",
+            "posX": 29,
+            "posY": -111
+        },
+        {
+            "component_name": "VSI",
+            "posX": -120,
+            "posY": -218
+        },
+        {
+            "component_name": "VSI",
+            "posX": -344,
+            "posY": 201
+        },
+        {
+            "component_name": "VSI",
+            "posX": 376,
+            "posY": 145
+        },
+        {
+            "component_name": "VSI",
+            "posX": 467,
+            "posY": -380
+        },
+        {
+            "component_name": "VSI",
+            "posX": -9,
+            "posY": 245
+        },
+        {
+            "component_name": "VSI",
+            "posX": -484,
+            "posY": -48
+        },
+        {
+            "component_name": "VSI",
+            "posX": 98,
+            "posY": -275
+        },
+        {
+            "component_name": "VSI",
+            "posX": 229,
+            "posY": -66
+        },
+        {
+            "component_name": "VSI",
+            "posX": -456,
+            "posY": 184
+        },
+        {
+            "component_name": "VSI",
+            "posX": -296,
+            "posY": -30
+        },
+        {
+            "component_name": "VSI",
+            "posX": 78,
+            "posY": -85
+        },
+        {
+            "component_name": "VSI",
+            "posX": -606,
+            "posY": -259
+        },
+        {
+            "component_name": "VSI",
+            "posX": 510,
+            "posY": -98
+        },
+        {
+            "component_name": "VSI",
+            "posX": 346,
+            "posY": -25
+        },
+        {
+            "component_name": "VSI",
+            "posX": -470,
+            "posY": 360
+        },
+        {
+            "component_name": "VSI",
+            "posX": 401,
+            "posY": -52
+        },
+        {
+            "component_name": "VSI",
+            "posX": -326,
+            "posY": -393
+        },
+        {
+            "component_name": "VSI",
+            "posX": 148,
+            "posY": 369
+        },
+        {
+            "component_name": "VSI",
+            "posX": 324,
+            "posY": 357
+        },
+        {
+            "component_name": "VSI",
+            "posX": 528,
+            "posY": -223
+        },
+        {
+            "component_name": "VSI",
+            "posX": 550,
+            "posY": 313
+        },
+        {
+            "component_name": "VSI",
+            "posX": -420,
+            "posY": 67
+        },
+        {
+            "component_name": "VSI",
+            "posX": 582,
+            "posY": 179
+        },
+        {
+            "component_name": "VSI",
+            "posX": -136,
+            "posY": -99
+        },
+        {
+            "component_name": "VSI",
+            "posX": 519,
+            "posY": -169
+        },
+        {
+            "component_name": "VSI",
+            "posX": -112,
+            "posY": 365
+        },
+        {
+            "component_name": "VSI",
+            "posX": -594,
+            "posY": 210
+        },
+        {
+            "component_name": "VSI",
+            "posX": 152,
+            "posY": -125
+        },
+        {
+            "component_name": "VSI",
+            "posX": -104,
+            "posY": -325
+        },
+        {
+            "component_name": "VSI",
+            "posX": 189,
+            "posY": 169
+        },
+        {
+            "component_name": "VSI",
+            "posX": -416,
+            "posY": -287
+        },
+        {
+            "component_name": "VSI",
+            "posX": 90,
+            "posY": 317
+        },
+        {
+            "component_name": "VSI",
+            "posX": 136,
+            "posY": -326
+        },
+        {
+            "component_name": "VSI",
+            "posX": -194,
+            "posY": -27
+        },
+        {
+            "component_name": "VSI",
+            "posX": -203,
+            "posY": -111
+        },
+        {
+            "component_name": "VSI",
+            "posX": -116,
+            "posY": -127
+        },
+        {
+            "component_name": "VSI",
+            "posX": 602,
+            "posY": -107
+        },
+        {
+            "component_name": "VSI",
+            "posX": 479,
+            "posY": -182
+        },
+        {
+            "component_name": "VSI",
+            "posX": 183,
+            "posY": -10
+        },
+        {
+            "component_name": "VSI",
+            "posX": -72,
+            "posY": -95
+        },
+        {
+            "component_name": "VSI",
+            "posX": 571,
+            "posY": 367
+        },
+        {
+            "component_name": "VSI",
+            "posX": 558,
+            "posY": 282
+        },
+        {
+            "component_name": "VSI",
+            "posX": 556,
+            "posY": 322
+        },
+        {
+            "component_name": "VSI",
+            "posX": 390,
+            "posY": 237
+        },
+        {
+            "component_name": "VSI",
+            "posX": 506,
+            "posY": 223
+        },
+        {
+            "component_name": "VSI",
+            "posX": 336,
+            "posY": -251
+        },
+        {
+            "component_name": "VSI",
+            "posX": 11,
+            "posY": -145
+        },
+        {
+            "component_name": "VSI",
+            "posX": 301,
+            "posY": -218
+        },
+        {
+            "component_name": "VSI",
+            "posX": 101,
+            "posY": -63
+        },
+        {
+            "component_name": "VSI",
+            "posX": 186,
+            "posY": 141
+        },
+        {
+            "component_name": "VSI",
+            "posX": 380,
+            "posY": -242
+        },
+        {
+            "component_name": "VSI",
+            "posX": -160,
+            "posY": 69
+        },
+        {
+            "component_name": "VSI",
+            "posX": 86,
+            "posY": -177
+        },
+        {
+            "component_name": "VSI",
+            "posX": 109,
+            "posY": 3
+        },
+        {
+            "component_name": "VSI",
+            "posX": -62,
+            "posY": 348
+        },
+        {
+            "component_name": "VSI",
+            "posX": 491,
+            "posY": -183
+        },
+        {
+            "component_name": "VSI",
+            "posX": 564,
+            "posY": -99
+        },
+        {
+            "component_name": "VSI",
+            "posX": -233,
+            "posY": 71
+        },
+        {
+            "component_name": "VSI",
+            "posX": -553,
+            "posY": -253
+        },
+        {
+            "component_name": "VSI",
+            "posX": 492,
+            "posY": -248
+        },
+        {
+            "component_name": "VSI",
+            "posX": 137,
+            "posY": -253
+        },
+        {
+            "component_name": "VSI",
+            "posX": 128,
+            "posY": 376
+        },
+        {
+            "component_name": "VSI",
+            "posX": 31,
+            "posY": -93
+        },
+        {
+            "component_name": "VSI",
+            "posX": 147,
+            "posY": -332
+        },
+        {
+            "component_name": "VSI",
+            "posX": 430,
+            "posY": -134
+        },
+        {
+            "component_name": "VSI",
+            "posX": 251,
+            "posY": 301
+        },
+        {
+            "component_name": "VSI",
+            "posX": -21,
+            "posY": -221
+        },
+        {
+            "component_name": "VSI",
+            "posX": -538,
+            "posY": -130
+        },
+        {
+            "component_name": "VSI",
+            "posX": -216,
+            "posY": -229
+        },
+        {
+            "component_name": "VSI",
+            "posX": 525,
+            "posY": -309
+        },
+        {
+            "component_name": "VSI",
+            "posX": -299,
+            "posY": -180
+        },
+        {
+            "component_name": "VSI",
+            "posX": -398,
+            "posY": -267
+        },
+        {
+            "component_name": "VSI",
+            "posX": 2,
+            "posY": 242
+        },
+        {
+            "component_name": "VSI",
+            "posX": -231,
+            "posY": 169
+        },
+        {
+            "component_name": "VSI",
+            "posX": -567,
+            "posY": 280
+        },
+        {
+            "component_name": "VSI",
+            "posX": -584,
+            "posY": -242
+        },
+        {
+            "component_name": "VSI",
+            "posX": -21,
+            "posY": -135
+        },
+        {
+            "component_name": "VSI",
+            "posX": -452,
+            "posY": -301
+        },
+        {
+            "component_name": "VSI",
+            "posX": 411,
+            "posY": -246
+        },
+        {
+            "component_name": "VSI",
+            "posX": 364,
+            "posY": 3
+        },
+        {
+            "component_name": "VSI",
+            "posX": -236,
+            "posY": -75
+        },
+        {
+            "component_name": "VSI",
+            "posX": 548,
+            "posY": 287
+        },
+        {
+            "component_name": "VSI",
+            "posX": 459,
+            "posY": -296
+        },
+        {
+            "component_name": "VSI",
+            "posX": -220,
+            "posY": -134
+        },
+        {
+            "component_name": "VSI",
+            "posX": -263,
+            "posY": 35
+        },
+        {
+            "component_name": "VSI",
+            "posX": 284,
+            "posY": 244
+        },
+        {
+            "component_name": "VSI",
+            "posX": 248,
+            "posY": 274
+        },
+        {
+            "component_name": "VSI",
+            "posX": 402,
+            "posY": -100
+        },
+        {
+            "component_name": "VSI",
+            "posX": 441,
+            "posY": -247
+        },
+        {
+            "component_name": "VSI",
+            "posX": 410,
+            "posY": -47
+        },
+        {
+            "component_name": "VSI",
+            "posX": 560,
+            "posY": 17
+        },
+        {
+            "component_name": "VSI",
+            "posX": -422,
+            "posY": -157
+        },
+        {
+            "component_name": "VSI",
+            "posX": -366,
+            "posY": 223
+        },
+        {
+            "component_name": "VSI",
+            "posX": -173,
+            "posY": -224
+        },
+        {
+            "component_name": "VSI",
+            "posX": 96,
+            "posY": 8
+        },
+        {
+            "component_name": "VSI",
+            "posX": -99,
+            "posY": -276
+        },
+        {
+            "component_name": "VSI",
+            "posX": -32,
+            "posY": 120
+        },
+        {
+            "component_name": "VSI",
+            "posX": -492,
+            "posY": -58
+        },
+        {
+            "component_name": "VSI",
+            "posX": -205,
+            "posY": -153
+        },
+        {
+            "component_name": "VSI",
+            "posX": 84,
+            "posY": 332
+        },
+        {
+            "component_name": "VSI",
+            "posX": -318,
+            "posY": -238
+        },
+        {
+            "component_name": "VSI",
+            "posX": 502,
+            "posY": -371
+        },
+        {
+            "component_name": "VSI",
+            "posX": 330,
+            "posY": 171
+        },
+        {
+            "component_name": "VSI",
+            "posX": -94,
+            "posY": -252
+        },
+        {
+            "component_name": "VSI",
+            "posX": -316,
+            "posY": -72
+        },
+        {
+            "component_name": "VSI",
+            "posX": -365,
+            "posY": 44
+        },
+        {
+            "component_name": "VSI",
+            "posX": -618,
+            "posY": 250
+        },
+        {
+            "component_name": "VSI",
+            "posX": 336,
+            "posY": -228
+        },
+        {
+            "component_name": "VSI",
+            "posX": 15,
+            "posY": -385
+        },
+        {
+            "component_name": "VSI",
+            "posX": -600,
+            "posY": 296
+        },
+        {
+            "component_name": "VSI",
+            "posX": 85,
+            "posY": 226
+        },
+        {
+            "component_name": "VSI",
+            "posX": 341,
+            "posY": 137
+        },
+        {
+            "component_name": "VSI",
+            "posX": 500,
+            "posY": -41
+        },
+        {
+            "component_name": "VSI",
+            "posX": -230,
+            "posY": 336
+        },
+        {
+            "component_name": "VSI",
+            "posX": 315,
+            "posY": -294
+        },
+        {
+            "component_name": "VSI",
+            "posX": 131,
+            "posY": -108
+        },
+        {
+            "component_name": "VSI",
+            "posX": -129,
+            "posY": -34
+        },
+        {
+            "component_name": "VSI",
+            "posX": 44,
+            "posY": -87
+        },
+        {
+            "component_name": "VSI",
+            "posX": 460,
+            "posY": -115
+        },
+        {
+            "component_name": "VSI",
+            "posX": 136,
+            "posY": 222
+        },
+        {
+            "component_name": "VSI",
+            "posX": 492,
+            "posY": -329
+        },
+        {
+            "component_name": "VSI",
+            "posX": 292,
+            "posY": -23
+        },
+        {
+            "component_name": "VSI",
+            "posX": 503,
+            "posY": -202
+        },
+        {
+            "component_name": "VSI",
+            "posX": 388,
+            "posY": 295
+        },
+        {
+            "component_name": "VSI",
+            "posX": 592,
+            "posY": 231
+        },
+        {
+            "component_name": "VSI",
+            "posX": -309,
+            "posY": 68
+        },
+        {
+            "component_name": "VSI",
+            "posX": 320,
+            "posY": -10
+        },
+        {
+            "component_name": "VSI",
+            "posX": -562,
+            "posY": -37
+        },
+        {
+            "component_name": "VSI",
+            "posX": -291,
+            "posY": -84
+        },
+        {
+            "component_name": "VSI",
+            "posX": -388,
+            "posY": 107
+        },
+        {
+            "component_name": "VSI",
+            "posX": -247,
+            "posY": 106
+        },
+        {
+            "component_name": "VSI",
+            "posX": 257,
+            "posY": 103
+        },
+        {
+            "component_name": "VSI",
+            "posX": -111,
+            "posY": -88
+        },
+        {
+            "component_name": "VSI",
+            "posX": -173,
+            "posY": -267
+        },
+        {
+            "component_name": "VSI",
+            "posX": 229,
+            "posY": -11
+        },
+        {
+            "component_name": "VSI",
+            "posX": -325,
+            "posY": 138
+        },
+        {
+            "component_name": "VSI",
+            "posX": 447,
+            "posY": -367
+        },
+        {
+            "component_name": "VSI",
+            "posX": -382,
+            "posY": 256
+        },
+        {
+            "component_name": "VSI",
+            "posX": 79,
+            "posY": 340
+        },
+        {
+            "component_name": "VSI",
+            "posX": -446,
+            "posY": -197
+        },
+        {
+            "component_name": "VSI",
+            "posX": 553,
+            "posY": 289
+        },
+        {
+            "component_name": "VSI",
+            "posX": 78,
+            "posY": -139
+        },
+        {
+            "component_name": "VSI",
+            "posX": -47,
+            "posY": -71
+        },
+        {
+            "component_name": "VSI",
+            "posX": 330,
+            "posY": -384
+        },
+        {
+            "component_name": "VSI",
+            "posX": 278,
+            "posY": -369
+        },
+        {
+            "component_name": "VSI",
+            "posX": -539,
+            "posY": 340
+        },
+        {
+            "component_name": "VSI",
+            "posX": -28,
+            "posY": -242
+        },
+        {
+            "component_name": "VSI",
+            "posX": 352,
+            "posY": -258
+        },
+        {
+            "component_name": "VSI",
+            "posX": 517,
+            "posY": 240
+        },
+        {
+            "component_name": "VSI",
+            "posX": -62,
+            "posY": -191
+        },
+        {
+            "component_name": "VSI",
+            "posX": -156,
+            "posY": -343
+        },
+        {
+            "component_name": "VSI",
+            "posX": -287,
+            "posY": 261
+        },
+        {
+            "component_name": "VSI",
+            "posX": 370,
+            "posY": -344
+        },
+        {
+            "component_name": "VSI",
+            "posX": 147,
+            "posY": 269
+        },
+        {
+            "component_name": "VSI",
+            "posX": -4,
+            "posY": 315
+        },
+        {
+            "component_name": "VSI",
+            "posX": 554,
+            "posY": 255
+        },
+        {
+            "component_name": "VSI",
+            "posX": -470,
+            "posY": -141
+        },
+        {
+            "component_name": "VSI",
+            "posX": -55,
+            "posY": -25
+        },
+        {
+            "component_name": "VSI",
+            "posX": -545,
+            "posY": -257
+        },
+        {
+            "component_name": "VSI",
+            "posX": 601,
+            "posY": 156
+        },
+        {
+            "component_name": "VSI",
+            "posX": 442,
+            "posY": -139
+        },
+        {
+            "component_name": "VSI",
+            "posX": 176,
+            "posY": 380
+        },
+        {
+            "component_name": "VSI",
+            "posX": -318,
+            "posY": -91
+        },
+        {
+            "component_name": "VSI",
+            "posX": 167,
+            "posY": 19
+        },
+        {
+            "component_name": "VSI",
+            "posX": 151,
+            "posY": 152
+        },
+        {
+            "component_name": "VSI",
+            "posX": -146,
+            "posY": -131
+        },
+        {
+            "component_name": "VSI",
+            "posX": 205,
+            "posY": -231
+        },
+        {
+            "component_name": "VSI",
+            "posX": -614,
+            "posY": -186
+        },
+        {
+            "component_name": "VSI",
+            "posX": 549,
+            "posY": 172
+        },
+        {
+            "component_name": "VSI",
+            "posX": 137,
+            "posY": -2
+        },
+        {
+            "component_name": "VSI",
+            "posX": 228,
+            "posY": 294
+        },
+        {
+            "component_name": "VSI",
+            "posX": -157,
+            "posY": -358
+        },
+        {
+            "component_name": "VSI",
+            "posX": -64,
+            "posY": 167
+        },
+        {
+            "component_name": "VSI",
+            "posX": 450,
+            "posY": 85
+        },
+        {
+            "component_name": "VSI",
+            "posX": -596,
+            "posY": -263
+        },
+        {
+            "component_name": "VSI",
+            "posX": -221,
+            "posY": 389
+        },
+        {
+            "component_name": "VSI",
+            "posX": 73,
+            "posY": 172
+        },
+        {
+            "component_name": "VSI",
+            "posX": 91,
+            "posY": 168
+        },
+        {
+            "component_name": "VSI",
+            "posX": -557,
+            "posY": -275
+        },
+        {
+            "component_name": "VSI",
+            "posX": 354,
+            "posY": -3
+        },
+        {
+            "component_name": "VSI",
+            "posX": -291,
+            "posY": 151
+        },
+        {
+            "component_name": "VSI",
+            "posX": 245,
+            "posY": -240
+        },
+        {
+            "component_name": "VSI",
+            "posX": 404,
+            "posY": 93
+        },
+        {
+            "component_name": "VSI",
+            "posX": 72,
+            "posY": 2
+        },
+        {
+            "component_name": "VSI",
+            "posX": -308,
+            "posY": 153
+        },
+        {
+            "component_name": "VSI",
+            "posX": -412,
+            "posY": 176
+        },
+        {
+            "component_name": "VSI",
+            "posX": -67,
+            "posY": 259
+        },
+        {
+            "component_name": "VSI",
+            "posX": 70,
+            "posY": 103
+        },
+        {
+            "component_name": "VSI",
+            "posX": 16,
+            "posY": -178
+        },
+        {
+            "component_name": "VSI",
+            "posX": -323,
+            "posY": -147
+        },
+        {
+            "component_name": "VSI",
+            "posX": -468,
+            "posY": -347
+        },
+        {
+            "component_name": "VSI",
+            "posX": 47,
+            "posY": -3
+        },
+        {
+            "component_name": "VSI",
+            "posX": 376,
+            "posY": 101
+        },
+        {
+            "component_name": "VSI",
+            "posX": 534,
+            "posY": 400
+        },
+        {
+            "component_name": "VSI",
+            "posX": 135,
+            "posY": -269
+        },
+        {
+            "component_name": "VSI",
+            "posX": -513,
+            "posY": -85
+        },
+        {
+            "component_name": "VSI",
+            "posX": 55,
+            "posY": -169
+        },
+        {
+            "component_name": "VSI",
+            "posX": 111,
+            "posY": 362
+        },
+        {
+            "component_name": "VSI",
+            "posX": -155,
+            "posY": 140
+        },
+        {
+            "component_name": "VSI",
+            "posX": 129,
+            "posY": 171
+        },
+        {
+            "component_name": "VSI",
+            "posX": 330,
+            "posY": 298
+        },
+        {
+            "component_name": "VSI",
+            "posX": 217,
+            "posY": 146
+        },
+        {
+            "component_name": "VSI",
+            "posX": -380,
+            "posY": 105
+        },
+        {
+            "component_name": "VSI",
+            "posX": 265,
+            "posY": 11
+        },
+        {
+            "component_name": "VSI",
+            "posX": 230,
+            "posY": -256
+        },
+        {
+            "component_name": "VSI",
+            "posX": 252,
+            "posY": 395
+        },
+        {
+            "component_name": "VSI",
+            "posX": -459,
+            "posY": 400
+        },
+        {
+            "component_name": "VSI",
+            "posX": 301,
+            "posY": -318
+        },
+        {
+            "component_name": "VSI",
+            "posX": -496,
+            "posY": -336
+        },
+        {
+            "component_name": "VSI",
+            "posX": 103,
+            "posY": 355
+        },
+        {
+            "component_name": "VSI",
+            "posX": 393,
+            "posY": 9
+        },
+        {
+            "component_name": "VSI",
+            "posX": 182,
+            "posY": 107
+        },
+        {
+            "component_name": "VSI",
+            "posX": -564,
+            "posY": -270
+        },
+        {
+            "component_name": "VSI",
+            "posX": -76,
+            "posY": -130
+        },
+        {
+            "component_name": "VSI",
+            "posX": 601,
+            "posY": -212
+        },
+        {
+            "component_name": "VSI",
+            "posX": -621,
+            "posY": -308
+        },
+        {
+            "component_name": "VSI",
+            "posX": -146,
+            "posY": 287
+        },
+        {
+            "component_name": "VSI",
+            "posX": -275,
+            "posY": -276
+        },
+        {
+            "component_name": "VSI",
+            "posX": 509,
+            "posY": -271
+        },
+        {
+            "component_name": "VSI",
+            "posX": -303,
+            "posY": 65
+        },
+        {
+            "component_name": "VSI",
+            "posX": 212,
+            "posY": 373
+        },
+        {
+            "component_name": "VSI",
+            "posX": -221,
+            "posY": -255
+        },
+        {
+            "component_name": "VSI",
+            "posX": 158,
+            "posY": -85
+        },
+        {
+            "component_name": "VSI",
+            "posX": -314,
+            "posY": 356
+        },
+        {
+            "component_name": "VSI",
+            "posX": -50,
+            "posY": -115
+        },
+        {
+            "component_name": "VSI",
+            "posX": -169,
+            "posY": 73
+        },
+        {
+            "component_name": "VSI",
+            "posX": 195,
+            "posY": 61
+        },
+        {
+            "component_name": "VSI",
+            "posX": -423,
+            "posY": -359
+        },
+        {
+            "component_name": "VSI",
+            "posX": 553,
+            "posY": -131
+        },
+        {
+            "component_name": "VSI",
+            "posX": 90,
+            "posY": 301
+        },
+        {
+            "component_name": "VSI",
+            "posX": -299,
+            "posY": -198
+        },
+        {
+            "component_name": "VSI",
+            "posX": 66,
+            "posY": 350
+        },
+        {
+            "component_name": "VSI",
+            "posX": 202,
+            "posY": -193
+        },
+        {
+            "component_name": "VSI",
+            "posX": 127,
+            "posY": -251
+        },
+        {
+            "component_name": "VSI",
+            "posX": 195,
+            "posY": -400
+        },
+        {
+            "component_name": "VSI",
+            "posX": -561,
+            "posY": 305
+        },
+        {
+            "component_name": "VSI",
+            "posX": 379,
+            "posY": -152
+        },
+        {
+            "component_name": "VSI",
+            "posX": -187,
+            "posY": 344
+        },
+        {
+            "component_name": "VSI",
+            "posX": 335,
+            "posY": 93
+        },
+        {
+            "component_name": "VSI",
+            "posX": 549,
+            "posY": 307
+        },
+        {
+            "component_name": "VSI",
+            "posX": -92,
+            "posY": 304
+        },
+        {
+            "component_name": "VSI",
+            "posX": -54,
+            "posY": -229
+        },
+        {
+            "component_name": "VSI",
+            "posX": -558,
+            "posY": -230
+        },
+        {
+            "component_name": "VSI",
+            "posX": -400,
+            "posY": -124
+        },
+        {
+            "component_name": "VSI",
+            "posX": 431,
+            "posY": -334
+        },
+        {
+            "component_name": "VSI",
+            "posX": 208,
+            "posY": 5
+        },
+        {
+            "component_name": "VSI",
+            "posX": 81,
+            "posY": -233
+        },
+        {
+            "component_name": "VSI",
+            "posX": -473,
+            "posY": 59
+        },
+        {
+            "component_name": "VSI",
+            "posX": 375,
+            "posY": 341
+        },
+        {
+            "component_name": "VSI",
+            "posX": -494,
+            "posY": -380
+        },
+        {
+            "component_name": "VSI",
+            "posX": -161,
+            "posY": -224
+        },
+        {
+            "component_name": "VSI",
+            "posX": -370,
+            "posY": 38
+        },
+        {
+            "component_name": "VSI",
+            "posX": -397,
+            "posY": 244
+        },
+        {
+            "component_name": "VSI",
+            "posX": -568,
+            "posY": -313
+        },
+        {
+            "component_name": "VSI",
+            "posX": -358,
+            "posY": -378
+        },
+        {
+            "component_name": "VSI",
+            "posX": 135,
+            "posY": -275
+        },
+        {
+            "component_name": "VSI",
+            "posX": 160,
+            "posY": 33
+        },
+        {
+            "component_name": "VSI",
+            "posX": 506,
+            "posY": -372
+        },
+        {
+            "component_name": "VSI",
+            "posX": 21,
+            "posY": 253
+        },
+        {
+            "component_name": "VSI",
+            "posX": 25,
+            "posY": 357
+        },
+        {
+            "component_name": "VSI",
+            "posX": 613,
+            "posY": 133
+        },
+        {
+            "component_name": "VSI",
+            "posX": -619,
+            "posY": 61
+        },
+        {
+            "component_name": "VSI",
+            "posX": -185,
+            "posY": 59
+        },
+        {
+            "component_name": "VSI",
+            "posX": 125,
+            "posY": -107
+        },
+        {
+            "component_name": "VSI",
+            "posX": 444,
+            "posY": -122
+        },
+        {
+            "component_name": "VSI",
+            "posX": -427,
+            "posY": 120
+        },
+        {
+            "component_name": "VSI",
+            "posX": -283,
+            "posY": -384
+        },
+        {
+            "component_name": "VSI",
+            "posX": -323,
+            "posY": 263
+        },
+        {
+            "component_name": "VSI",
+            "posX": -170,
+            "posY": -260
+        },
+        {
+            "component_name": "VSI",
+            "posX": 449,
+            "posY": 300
+        },
+        {
+            "component_name": "VSI",
+            "posX": -534,
+            "posY": -258
+        },
+        {
+            "component_name": "VSI",
+            "posX": 58,
+            "posY": 212
+        },
+        {
+            "component_name": "VSI",
+            "posX": -262,
+            "posY": -266
+        },
+        {
+            "component_name": "VSI",
+            "posX": 320,
+            "posY": -229
+        },
+        {
+            "component_name": "VSI",
+            "posX": 604,
+            "posY": -312
+        },
+        {
+            "component_name": "VSI",
+            "posX": -495,
+            "posY": 377
+        },
+        {
+            "component_name": "VSI",
+            "posX": 124,
+            "posY": -153
+        },
+        {
+            "component_name": "VSI",
+            "posX": 259,
+            "posY": 247
+        },
+        {
+            "component_name": "VSI",
+            "posX": 139,
+            "posY": -50
+        },
+        {
+            "component_name": "VSI",
+            "posX": 350,
+            "posY": 212
+        },
+        {
+            "component_name": "VSI",
+            "posX": 566,
+            "posY": -155
+        },
+        {
+            "component_name": "VSI",
+            "posX": -246,
+            "posY": 99
+        },
+        {
+            "component_name": "VSI",
+            "posX": -467,
+            "posY": -171
+        },
+        {
+            "component_name": "VSI",
+            "posX": 481,
+            "posY": 39
+        },
+        {
+            "component_name": "VSI",
+            "posX": -253,
+            "posY": -246
+        },
+        {
+            "component_name": "VSI",
+            "posX": -284,
+            "posY": 14
+        },
+        {
+            "component_name": "VSI",
+            "posX": 340,
+            "posY": 256
+        },
+        {
+            "component_name": "VSI",
+            "posX": -591,
+            "posY": -77
+        },
+        {
+            "component_name": "VSI",
+            "posX": -596,
+            "posY": 252
+        },
+        {
+            "component_name": "VSI",
+            "posX": -320,
+            "posY": 36
+        },
+        {
+            "component_name": "VSI",
+            "posX": -423,
+            "posY": 160
+        },
+        {
+            "component_name": "VSI",
+            "posX": -126,
+            "posY": 316
+        },
+        {
+            "component_name": "VSI",
+            "posX": -506,
+            "posY": -366
+        },
+        {
+            "component_name": "VSI",
+            "posX": 257,
+            "posY": -301
+        },
+        {
+            "component_name": "VSI",
+            "posX": -26,
+            "posY": 134
+        },
+        {
+            "component_name": "VSI",
+            "posX": -377,
+            "posY": 116
+        },
+        {
+            "component_name": "VSI",
+            "posX": -615,
+            "posY": 280
+        },
+        {
+            "component_name": "VSI",
+            "posX": 109,
+            "posY": 103
+        },
+        {
+            "component_name": "VSI",
+            "posX": 468,
+            "posY": -180
+        },
+        {
+            "component_name": "VSI",
+            "posX": -335,
+            "posY": 331
+        },
+        {
+            "component_name": "VSI",
+            "posX": 191,
+            "posY": 222
+        },
+        {
+            "component_name": "VSI",
+            "posX": 306,
+            "posY": -317
+        },
+        {
+            "component_name": "VSI",
+            "posX": 170,
+            "posY": -398
+        },
+        {
+            "component_name": "VSI",
+            "posX": -485,
+            "posY": 62
+        },
+        {
+            "component_name": "VSI",
+            "posX": 554,
+            "posY": 211
+        },
+        {
+            "component_name": "VSI",
+            "posX": -557,
+            "posY": -234
+        },
+        {
+            "component_name": "VSI",
+            "posX": -587,
+            "posY": -192
+        },
+        {
+            "component_name": "VSI",
+            "posX": 8,
+            "posY": 20
+        },
+        {
+            "component_name": "VSI",
+            "posX": -467,
+            "posY": -262
+        },
+        {
+            "component_name": "VSI",
+            "posX": 214,
+            "posY": 356
+        },
+        {
+            "component_name": "VSI",
+            "posX": -198,
+            "posY": 194
+        },
+        {
+            "component_name": "VSI",
+            "posX": -359,
+            "posY": -333
+        },
+        {
+            "component_name": "VSI",
+            "posX": -239,
+            "posY": 245
+        },
+        {
+            "component_name": "VSI",
+            "posX": 240,
+            "posY": 290
+        },
+        {
+            "component_name": "VSI",
+            "posX": 297,
+            "posY": 42
+        },
+        {
+            "component_name": "VSI",
+            "posX": -616,
+            "posY": -112
+        },
+        {
+            "component_name": "VSI",
+            "posX": 142,
+            "posY": -256
+        },
+        {
+            "component_name": "VSI",
+            "posX": -549,
+            "posY": -125
+        },
+        {
+            "component_name": "VSI",
+            "posX": -470,
+            "posY": -229
+        },
+        {
+            "component_name": "VSI",
+            "posX": -561,
+            "posY": -360
+        },
+        {
+            "component_name": "VSI",
+            "posX": -227,
+            "posY": 190
+        },
+        {
+            "component_name": "VSI",
+            "posX": -346,
+            "posY": -9
+        },
+        {
+            "component_name": "VSI",
+            "posX": 58,
+            "posY": -364
+        },
+        {
+            "component_name": "VSI",
+            "posX": 539,
+            "posY": -76
+        },
+        {
+            "component_name": "VSI",
+            "posX": 502,
+            "posY": 58
+        },
+        {
+            "component_name": "VSI",
+            "posX": 579,
+            "posY": -386
+        },
+        {
+            "component_name": "VSI",
+            "posX": 273,
+            "posY": 310
+        },
+        {
+            "component_name": "VSI",
+            "posX": -420,
+            "posY": -212
+        },
+        {
+            "component_name": "VSI",
+            "posX": -31,
+            "posY": -235
+        },
+        {
+            "component_name": "VSI",
+            "posX": -468,
+            "posY": 221
+        },
+        {
+            "component_name": "VSI",
+            "posX": 329,
+            "posY": 319
+        },
+        {
+            "component_name": "VSI",
+            "posX": -399,
+            "posY": -239
+        },
+        {
+            "component_name": "VSI",
+            "posX": -582,
+            "posY": -181
+        },
+        {
+            "component_name": "VSI",
+            "posX": 104,
+            "posY": 197
+        },
+        {
+            "component_name": "VSI",
+            "posX": 53,
+            "posY": -319
+        },
+        {
+            "component_name": "VSI",
+            "posX": 214,
+            "posY": -242
+        },
+        {
+            "component_name": "VSI",
+            "posX": -498,
+            "posY": 254
+        },
+        {
+            "component_name": "VSI",
+            "posX": -318,
+            "posY": 117
+        },
+        {
+            "component_name": "VSI",
+            "posX": -229,
+            "posY": 73
+        },
+        {
+            "component_name": "VSI",
+            "posX": -427,
+            "posY": -388
+        },
+        {
+            "component_name": "VSI",
+            "posX": -482,
+            "posY": 130
+        },
+        {
+            "component_name": "VSI",
+            "posX": -351,
+            "posY": 290
+        },
+        {
+            "component_name": "VSI",
+            "posX": 231,
+            "posY": 3
+        },
+        {
+            "component_name": "VSI",
+            "posX": 317,
+            "posY": -98
+        },
+        {
+            "component_name": "VSI",
+            "posX": 110,
+            "posY": -94
+        },
+        {
+            "component_name": "VSI",
+            "posX": 183,
+            "posY": 300
+        },
+        {
+            "component_name": "VSI",
+            "posX": 178,
+            "posY": 291
+        },
+        {
+            "component_name": "VSI",
+            "posX": -529,
+            "posY": 244
+        },
+        {
+            "component_name": "VSI",
+            "posX": -302,
+            "posY": 48
+        },
+        {
+            "component_name": "VSI",
+            "posX": -204,
+            "posY": 312
+        },
+        {
+            "component_name": "VSI",
+            "posX": 333,
+            "posY": -377
+        },
+        {
+            "component_name": "VSI",
+            "posX": -366,
+            "posY": -6
+        },
+        {
+            "component_name": "VSI",
+            "posX": -137,
+            "posY": -30
+        },
+        {
+            "component_name": "VSI",
+            "posX": 466,
+            "posY": -11
+        },
+        {
+            "component_name": "VSI",
+            "posX": -399,
+            "posY": 42
+        },
+        {
+            "component_name": "VSI",
+            "posX": -19,
+            "posY": 81
+        },
+        {
+            "component_name": "VSI",
+            "posX": 135,
+            "posY": 329
+        },
+        {
+            "component_name": "VSI",
+            "posX": 220,
+            "posY": -234
+        },
+        {
+            "component_name": "VSI",
+            "posX": -234,
+            "posY": 172
+        },
+        {
+            "component_name": "VSI",
+            "posX": 476,
+            "posY": -106
+        },
+        {
+            "component_name": "VSI",
+            "posX": -415,
+            "posY": 310
+        },
+        {
+            "component_name": "VSI",
+            "posX": -339,
+            "posY": -309
+        },
+        {
+            "component_name": "VSI",
+            "posX": 46,
+            "posY": 294
+        },
+        {
+            "component_name": "VSI",
+            "posX": 507,
+            "posY": -171
+        },
+        {
+            "component_name": "VSI",
+            "posX": 618,
+            "posY": 32
+        },
+        {
+            "component_name": "VSI",
+            "posX": 454,
+            "posY": 207
+        },
+        {
+            "component_name": "VSI",
+            "posX": -126,
+            "posY": 353
+        },
+        {
+            "component_name": "VSI",
+            "posX": -565,
+            "posY": -155
+        },
+        {
+            "component_name": "VSI",
+            "posX": 458,
+            "posY": 336
+        },
+        {
+            "component_name": "VSI",
+            "posX": -246,
+            "posY": 376
+        },
+        {
+            "component_name": "VSI",
+            "posX": -144,
+            "posY": -312
+        },
+        {
+            "component_name": "VSI",
+            "posX": -147,
+            "posY": -151
+        },
+        {
+            "component_name": "VSI",
+            "posX": -441,
+            "posY": 240
+        },
+        {
+            "component_name": "VSI",
+            "posX": 438,
+            "posY": 59
+        },
+        {
+            "component_name": "VSI",
+            "posX": -342,
+            "posY": -107
+        },
+        {
+            "component_name": "VSI",
+            "posX": -282,
+            "posY": -147
+        },
+        {
+            "component_name": "VSI",
+            "posX": 32,
+            "posY": 102
+        },
+        {
+            "component_name": "VSI",
+            "posX": -249,
+            "posY": 15
+        },
+        {
+            "component_name": "VSI",
+            "posX": -234,
+            "posY": -116
+        },
+        {
+            "component_name": "VSI",
+            "posX": 117,
+            "posY": 60
+        },
+        {
+            "component_name": "VSI",
+            "posX": -294,
+            "posY": -240
+        },
+        {
+            "component_name": "VSI",
+            "posX": 273,
+            "posY": 0
+        },
+        {
+            "component_name": "VSI",
+            "posX": -200,
+            "posY": -384
+        },
+        {
+            "component_name": "VSI",
+            "posX": -386,
+            "posY": -335
+        },
+        {
+            "component_name": "VSI",
+            "posX": -519,
+            "posY": -42
+        },
+        {
+            "component_name": "VSI",
+            "posX": -472,
+            "posY": -178
+        },
+        {
+            "component_name": "VSI",
+            "posX": 163,
+            "posY": -371
+        },
+        {
+            "component_name": "VSI",
+            "posX": 395,
+            "posY": -219
+        },
+        {
+            "component_name": "VSI",
+            "posX": 398,
+            "posY": 301
+        },
+        {
+            "component_name": "VSI",
+            "posX": -465,
+            "posY": 230
+        },
+        {
+            "component_name": "VSI",
+            "posX": 624,
+            "posY": 132
+        },
+        {
+            "component_name": "VSI",
+            "posX": -322,
+            "posY": -237
+        },
+        {
+            "component_name": "VSI",
+            "posX": 199,
+            "posY": 89
+        },
+        {
+            "component_name": "VSI",
+            "posX": 116,
+            "posY": 361
+        },
+        {
+            "component_name": "VSI",
+            "posX": 90,
+            "posY": -44
+        },
+        {
+            "component_name": "VSI",
+            "posX": 22,
+            "posY": 113
+        },
+        {
+            "component_name": "VSI",
+            "posX": 449,
+            "posY": -216
+        },
+        {
+            "component_name": "VSI",
+            "posX": -78,
+            "posY": 292
+        },
+        {
+            "component_name": "VSI",
+            "posX": 370,
+            "posY": -256
+        },
+        {
+            "component_name": "VSI",
+            "posX": 531,
+            "posY": -298
+        },
+        {
+            "component_name": "VSI",
+            "posX": -527,
+            "posY": 188
+        },
+        {
+            "component_name": "VSI",
+            "posX": 273,
+            "posY": 22
+        },
+        {
+            "component_name": "VSI",
+            "posX": 104,
+            "posY": 362
+        },
+        {
+            "component_name": "VSI",
+            "posX": 416,
+            "posY": 373
+        },
+        {
+            "component_name": "VSI",
+            "posX": -482,
+            "posY": -215
+        },
+        {
+            "component_name": "VSI",
+            "posX": -576,
+            "posY": 133
+        },
+        {
+            "component_name": "VSI",
+            "posX": -211,
+            "posY": -248
+        },
+        {
+            "component_name": "VSI",
+            "posX": 52,
+            "posY": 266
+        },
+        {
+            "component_name": "VSI",
+            "posX": 26,
+            "posY": 203
+        },
+        {
+            "component_name": "VSI",
+            "posX": -408,
+            "posY": -331
+        },
+        {
+            "component_name": "VSI",
+            "posX": -154,
+            "posY": 281
+        },
+        {
+            "component_name": "VSI",
+            "posX": 72,
+            "posY": -268
+        },
+        {
+            "component_name": "VSI",
+            "posX": -460,
+            "posY": 322
+        },
+        {
+            "component_name": "VSI",
+            "posX": -6,
+            "posY": -48
+        },
+        {
+            "component_name": "VSI",
+            "posX": -183,
+            "posY": 370
+        },
+        {
+            "component_name": "VSI",
+            "posX": 525,
+            "posY": 317
+        },
+        {
+            "component_name": "VSI",
+            "posX": -20,
+            "posY": 68
+        },
+        {
+            "component_name": "VSI",
+            "posX": -156,
+            "posY": 64
+        },
+        {
+            "component_name": "VSI",
+            "posX": 386,
+            "posY": -370
+        },
+        {
+            "component_name": "VSI",
+            "posX": 321,
+            "posY": 391
+        },
+        {
+            "component_name": "VSI",
+            "posX": 307,
+            "posY": 103
+        },
+        {
+            "component_name": "VSI",
+            "posX": -17,
+            "posY": -51
+        },
+        {
+            "component_name": "VSI",
+            "posX": 128,
+            "posY": 197
+        },
+        {
+            "component_name": "VSI",
+            "posX": -357,
+            "posY": 42
+        },
+        {
+            "component_name": "VSI",
+            "posX": -520,
+            "posY": 331
+        },
+        {
+            "component_name": "VSI",
+            "posX": 270,
+            "posY": 54
+        },
+        {
+            "component_name": "VSI",
+            "posX": 387,
+            "posY": 295
+        },
+        {
+            "component_name": "VSI",
+            "posX": 558,
+            "posY": 13
+        },
+        {
+            "component_name": "VSI",
+            "posX": -276,
+            "posY": 205
+        },
+        {
+            "component_name": "VSI",
+            "posX": 569,
+            "posY": 56
+        },
+        {
+            "component_name": "VSI",
+            "posX": -432,
+            "posY": 93
+        },
+        {
+            "component_name": "VSI",
+            "posX": -12,
+            "posY": 362
+        },
+        {
+            "component_name": "VSI",
+            "posX": 521,
+            "posY": -73
+        },
+        {
+            "component_name": "VSI",
+            "posX": -346,
+            "posY": -204
+        },
+        {
+            "component_name": "VSI",
+            "posX": 186,
+            "posY": 176
+        },
+        {
+            "component_name": "VSI",
+            "posX": -238,
+            "posY": 385
+        },
+        {
+            "component_name": "VSI",
+            "posX": 94,
+            "posY": -55
+        },
+        {
+            "component_name": "VSI",
+            "posX": 451,
+            "posY": 162
+        },
+        {
+            "component_name": "VSI",
+            "posX": 430,
+            "posY": -108
+        },
+        {
+            "component_name": "VSI",
+            "posX": -434,
+            "posY": 198
+        },
+        {
+            "component_name": "VSI",
+            "posX": -138,
+            "posY": -253
+        },
+        {
+            "component_name": "VSI",
+            "posX": 263,
+            "posY": -57
+        },
+        {
+            "component_name": "VSI",
+            "posX": -536,
+            "posY": -372
+        },
+        {
+            "component_name": "VSI",
+            "posX": 314,
+            "posY": -164
+        },
+        {
+            "component_name": "VSI",
+            "posX": 182,
+            "posY": 272
+        },
+        {
+            "component_name": "VSI",
+            "posX": -392,
+            "posY": 114
+        },
+        {
+            "component_name": "VSI",
+            "posX": 202,
+            "posY": 347
+        },
+        {
+            "component_name": "VSI",
+            "posX": -138,
+            "posY": -56
+        }
+    ]
+}

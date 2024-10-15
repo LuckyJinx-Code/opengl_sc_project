@@ -100,69 +100,60 @@ void gen_SSI() {
     glGenBuffers(1, &SSI_triangle_VBO);
     glBindBuffer(GL_ARRAY_BUFFER, SSI_triangle_VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(tri_vertices), tri_vertices, GL_STATIC_DRAW);
+
+    float horizon_vertices[18];
+    gen_rectangle(
+        SSI_HORIZON_LINES_WIDTH,
+        SSI_HORIZON_LINES_HEIGHT,
+        (vec2){0.0,0.0},
+        0.0,
+        0.0,
+        horizon_vertices
+    );
+    glGenBuffers(1, &SSI_horizon_line_VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, SSI_horizon_line_VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(horizon_vertices), horizon_vertices, GL_STATIC_DRAW);
+
 }
 
-void draw_SSI() {
+void draw_SSI(float vPosX, float vPosY) {
     //Draw triangle
 
     float tr_height = sqrt(pow(SSI_TRIANGLE_SIDE/2.0f,2.0f) + pow(SSI_TRIANGLE_SIDE,2.0f));
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){0.0,(float)SSI_Y_POS + SSI_RADIUS_1 + tr_height/2.0f,0.0});
-    
-    glUniform4fv(colorLoc,1, WHITE);
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-
-    glBindBuffer(GL_ARRAY_BUFFER, SSI_triangle_VBO);
-   
-    glEnableVertexAttribArray(POS_ATTR);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    reset_modelmatrix();
+    set_position(vPosX,vPosY + SSI_RADIUS_1 + tr_height/2.0f);
+    set_color(WHITE);
+    draw(SSI_triangle_VBO, 3, GL_TRIANGLES);
 
     //Drawing arc and lines
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){0.0,(float)SSI_Y_POS,0.0});
-    glm_rotate(modelMatrix,-rotZ,(vec3){0.0,0.0,1.0});
+    reset_modelmatrix();
+    set_position(vPosX,vPosY);
+    rotate(rotZ);
+    draw(SSI_arc_VBO, SSI_ARC_NUM_VERTICES, GL_TRIANGLE_STRIP);
+    draw(SSI_lines_VBO, SSI_LINES_NUM_VERTICES, GL_TRIANGLES);
 
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-
-    glBindBuffer(GL_ARRAY_BUFFER, SSI_arc_VBO);
-   
-    glEnableVertexAttribArray(POS_ATTR);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, SSI_ARC_NUM_VERTICES);
-
-    glBindBuffer(GL_ARRAY_BUFFER, SSI_lines_VBO);
-   
-    glEnableVertexAttribArray(POS_ATTR);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-
-    glDrawArrays(GL_TRIANGLES, 0, SSI_LINES_NUM_VERTICES);
+    //Drawing angle indicator
     
     float angle = 2*GLM_PI - rotX;
     if (angle > GLM_PI) angle = -2*GLM_PI + angle; //180,360 range turns to -180,0
 
     float SSI_height = SSI_PITCH_NUM_LINES*SSI_PITCH_SPACE_BETWEEN;
 
-    float current_pos = (float)SSI_Y_POS - SSI_height/2  + (angle/GLM_PI) * SSI_height/2;
+    float current_pos = - SSI_height/2  + (angle/GLM_PI) * SSI_height/2;
 
-    float SSI_bottom = (float)SSI_Y_POS - (float)SSI_PITCH_HEIGHT/2;
-    float SSI_top = (float)SSI_Y_POS + (float)SSI_PITCH_HEIGHT/2;
+    float SSI_bottom = - (float)SSI_PITCH_HEIGHT/2;
+    float SSI_top = (float)SSI_PITCH_HEIGHT/2;
 
-    float transparency_point1 = SSI_bottom + (float)SSI_PITCH_VANISH_HEIGHT;
-    float transparency_point2 = SSI_top - (float)SSI_PITCH_VANISH_HEIGHT;
+    float transparency_point1 = (float)SSI_PITCH_VANISH_HEIGHT;
+    float transparency_point2 = -(float)SSI_PITCH_VANISH_HEIGHT;
 
     for (int i = 0; i < SSI_PITCH_NUM_LINES; i++) {
-        glm_mat4_identity(modelMatrix);
-        glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-        glm_translate(modelMatrix,(vec3){0.0,SSI_Y_POS,0.0});
-        glm_rotate(modelMatrix,-rotZ,(vec3){0.0,0.0,1.0});
-        glm_translate(modelMatrix,(vec3){0.0,-current_pos+SSI_Y_POS,0.0});
+        reset_modelmatrix();
+        set_position(vPosX,vPosY);
+        rotate(rotZ);
+        set_position(0.0f,-current_pos);
 
         float alpha = 1.0;
 
@@ -174,18 +165,13 @@ void draw_SSI() {
             alpha = 1.0 - (current_pos - transparency_point2)/(SSI_top - transparency_point2);
         }
 
-        color[3] = alpha;
+        float color[4] = {1.0f, 1.0f, 1.0f, alpha};
 
-        glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-        glUniform1i(hasTextureLoc,0);
-        glUniform4fv(colorLoc,1, &color[0]);
-
-        glBindBuffer(GL_ARRAY_BUFFER, i%2 == 0 ? SSI_pitch_line_1_VBO : SSI_pitch_line_2_VBO);
-   
-        glEnableVertexAttribArray(POS_ATTR);
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-
-        glDrawArrays(GL_TRIANGLES, 0, 6);
+        set_color(color);
+        draw(
+            i%2 == 0 ? SSI_pitch_line_1_VBO : SSI_pitch_line_2_VBO,
+            6, GL_TRIANGLES
+        );
 
         if (i%2 == 0) {
             int num = abs(-180 + 5*i);
@@ -193,15 +179,9 @@ void draw_SSI() {
 
             sprintf(num_string, "%d", num);
 
-            glm_translate(modelMatrix,(vec3){SSI_PITCH_SPACE_NUM + (float)SSI_PITCH_WIDTH_BIG/2.0,0.0,0.0});
-            glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-            glUniform1i(hasTextureLoc,1);
-
+            set_position(SSI_PITCH_SPACE_NUM + (float)SSI_PITCH_WIDTH_BIG/2.0, 0.0f);
             render_text(num_string,0.3f,0);
-
-            glm_translate(modelMatrix,(vec3){-SSI_PITCH_SPACE_NUM*2 - (float)SSI_PITCH_WIDTH_BIG,0.0,0.0});
-            glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-
+            set_position(-SSI_PITCH_SPACE_NUM*2 - (float)SSI_PITCH_WIDTH_BIG, 0.0f);
             render_text(num_string,0.3f,0);
 
         }
@@ -209,44 +189,33 @@ void draw_SSI() {
         current_pos += (float)SSI_PITCH_SPACE_BETWEEN;
     }
 
-    color[0] = 0.0;
-    color[1] = 0.0;
-    color[2] = 0.0;
-    color[3] = 1.0;
+    //Center mark
 
-    float size_with_stroke = ((float)SSI_CENTER_MARK_SIZE+2)/SSI_CENTER_MARK_SIZE;
+    reset_modelmatrix();
+    set_position(vPosX, vPosY);
+    set_color(BLACK);
+    draw(SSI_center_mark_VBO,6,GL_TRIANGLES);
+    resize(
+        (SSI_CENTER_MARK_SIZE - 2.0f)/SSI_CENTER_MARK_SIZE,
+        (SSI_CENTER_MARK_SIZE - 2.0f)/SSI_CENTER_MARK_SIZE
+    );
+    set_color(YELLOW);
+    draw(SSI_center_mark_VBO,6,GL_TRIANGLES);
 
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){0.0,(float)SSI_Y_POS,0.0});
-    glm_scale(modelMatrix,(vec3){size_with_stroke,size_with_stroke});
+    //Horizon marks
 
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-    glUniform4fv(colorLoc,1, &color[0]);
-
-    glBindBuffer(GL_ARRAY_BUFFER, SSI_center_mark_VBO);
-   
-    glEnableVertexAttribArray(POS_ATTR);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-
-    glDrawArrays(GL_TRIANGLES, 0, 6);
-
-    color[0] = 1.0;
-    color[1] = 250.0/255.0;
-    color[2] = 0.0;
-    color[3] = 1.0;
-
-    glm_mat4_identity(modelMatrix);
-    glm_scale(modelMatrix,(vec3){2.0/WINDOW_WIDTH,2.0/WINDOW_HEIGHT,0.0});
-    glm_translate(modelMatrix,(vec3){0.0,(float)SSI_Y_POS,0.0});
-
-    glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, modelMatrix[0]);
-    glUniform4fv(colorLoc,1, &color[0]);
-
-    glBindBuffer(GL_ARRAY_BUFFER, SSI_center_mark_VBO);
-   
-    glEnableVertexAttribArray(POS_ATTR);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-
-    glDrawArrays(GL_TRIANGLES, 0, 6);
+    for (int i = -1; i <= 1; i += 2) {
+        reset_modelmatrix();
+        set_position(vPosX, vPosY);
+        rotate(rotZ);
+        set_position(SSI_HORIZON_LINES_DIST*i,0.0f);
+        set_color(BLACK);
+        draw(SSI_horizon_line_VBO,6,GL_TRIANGLES);
+        resize(
+            (SSI_HORIZON_LINES_WIDTH - 2.0f)/SSI_HORIZON_LINES_WIDTH,
+            (SSI_HORIZON_LINES_HEIGHT - 2.0f)/SSI_HORIZON_LINES_HEIGHT
+        );
+        set_color(YELLOW);
+        draw(SSI_horizon_line_VBO,6,GL_TRIANGLES);
+    }
 }

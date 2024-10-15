@@ -1,0 +1,19 @@
+{
+    "terrain" : {
+        "vertices_per_square" : 10,
+        "squares_per_chunk" : 30,
+        "chunk_size" : 20,
+        "terrain_diameter" : 7,
+        "mountain_max_height" : 5
+    },
+    "controllers" : [
+        {
+            "parameter" : "rot_X",
+            "easing" : "linear",
+            "first_value" : -0.14159,
+            "last_value" : 0.14159,
+            "duration" : 4,
+            "loop_mode" : "endless"
+        }
+    ]
+}

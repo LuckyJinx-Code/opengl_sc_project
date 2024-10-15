@@ -1,0 +1,42 @@
+{
+    "controllers": [
+        {
+            "parameter": "posX",
+            "easing": "cosinusoid",
+            "first_value": -85392.37266192309,
+            "last_value": -85151.44156824016,
+            "duration": 966.8556931916595,
+            "loop_mode": "restart"
+        },
+        {
+            "parameter": "posY",
+            "easing": "sinusoid",
+            "first_value": 4387.402211133561,
+            "last_value": 5387.402211133561,
+            "duration": 100
+        },
+        {
+            "parameter": "posZ",
+            "easing": "sinusoid",
+            "first_value": -96523.91537251737,
+            "last_value": -96282.98427883444,
+            "duration": 966.8556931916595,
+            "loop_mode": "restart"
+        },
+        {
+            "parameter": "rotY",
+            "easing": "linear",
+            "first_value": 0,
+            "last_value": 3.141592653589793,
+            "duration": 966.8556931916595,
+            "loop_mode": "restart"
+        }
+    ],
+    "components": [
+        {
+            "component_name": "Compass",
+            "posX": 127,
+            "posY": -42
+        }
+    ]
+}

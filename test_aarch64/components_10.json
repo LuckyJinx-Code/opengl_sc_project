@@ -1,0 +1,87 @@
+{
+    "controllers": [
+        {
+            "parameter": "posX",
+            "easing": "cosinusoid",
+            "first_value": -94801.67821486818,
+            "last_value": -94552.96330842334,
+            "duration": 1030.3567898775154,
+            "loop_mode": "restart"
+        },
+        {
+            "parameter": "posY",
+            "easing": "sinusoid",
+            "first_value": 4342.760631455644,
+            "last_value": 5342.760631455644,
+            "duration": 100
+        },
+        {
+            "parameter": "posZ",
+            "easing": "sinusoid",
+            "first_value": -98337.48019965216,
+            "last_value": -98088.76529320731,
+            "duration": 1030.3567898775154,
+            "loop_mode": "restart"
+        },
+        {
+            "parameter": "rotY",
+            "easing": "linear",
+            "first_value": 0,
+            "last_value": 3.141592653589793,
+            "duration": 1030.3567898775154,
+            "loop_mode": "restart"
+        }
+    ],
+    "components": [
+        {
+            "component_name": "Compass",
+            "posX": 353,
+            "posY": -324
+        },
+        {
+            "component_name": "Compass",
+            "posX": 583,
+            "posY": -339
+        },
+        {
+            "component_name": "Compass",
+            "posX": -278,
+            "posY": 234
+        },
+        {
+            "component_name": "Compass",
+            "posX": -63,
+            "posY": -73
+        },
+        {
+            "component_name": "Compass",
+            "posX": 623,
+            "posY": 311
+        },
+        {
+            "component_name": "Compass",
+            "posX": 547,
+            "posY": 353
+        },
+        {
+            "component_name": "Compass",
+            "posX": -286,
+            "posY": -275
+        },
+        {
+            "component_name": "Compass",
+            "posX": 575,
+            "posY": 71
+        },
+        {
+            "component_name": "Compass",
+            "posX": -351,
+            "posY": 28
+        },
+        {
+            "component_name": "Compass",
+            "posX": 419,
+            "posY": 1
+        }
+    ]
+}

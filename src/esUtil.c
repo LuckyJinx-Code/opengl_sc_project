@@ -26,6 +26,7 @@
 #include <GLES2/gl2.h>
 #include <EGL/egl.h>
 #include "esUtil.h"
+#include "utils.h"
 
 #ifdef RPI_NO_X
 #include  "bcm_host.h"
@@ -338,17 +339,16 @@ void ESUTIL_API esInitContext ( ESContext *esContext )
 GLboolean ESUTIL_API esCreateWindow ( ESContext *esContext, const char* title, GLint width, GLint height, GLuint flags )
 {
    EGLint attribList[] =
-   {
-       EGL_RED_SIZE,       5,
-       EGL_GREEN_SIZE,     6,
-       EGL_BLUE_SIZE,      5,
+   {   
+       EGL_RED_SIZE,       8,
+       EGL_GREEN_SIZE,     8,
+       EGL_BLUE_SIZE,      8,
        EGL_ALPHA_SIZE,     8,
-       EGL_DEPTH_SIZE,     24,
+       EGL_DEPTH_SIZE,     8,
        EGL_STENCIL_SIZE,   8,
-       EGL_SAMPLE_BUFFERS, 1,
        EGL_NONE
    };
-   
+
    if ( esContext == NULL )
    {
       return GL_FALSE;
@@ -408,10 +408,10 @@ void ESUTIL_API esMainLoop ( ESContext *esContext )
 
         totaltime += deltatime;
         frames++;
-        if (totaltime >  2.0f)
+        if (totaltime >  1.0f)
         {
-            printf("%4d frames rendered in %1.4f seconds -> FPS=%3.4f\n", frames, totaltime, frames/totaltime);
-            totaltime -= 2.0f;
+            printf("FPS: %0.6f\n", frames/totaltime);
+            totaltime -= 1.0f;
             frames = 0;
         }
     }

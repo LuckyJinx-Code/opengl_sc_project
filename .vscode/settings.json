@@ -34,6 +34,19 @@
         "streambuf": "c",
         "tuple": "c",
         "utility": "c",
-        "time.h": "c"
-    }
+        "time.h": "c",
+        "stb_image.h": "c",
+        "chrono": "c",
+        "cjson.h": "c",
+        "type_traits": "c",
+        "random": "c",
+        "utils.h": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "glsc2.h": "c",
+        "sdl.h": "c",
+        "numbers": "c",
+        "config_control.h": "c"
+    },
+    "cmake.sourceDirectory": "/home/josue/Documents/opengl_sc_project/freetype-2.13.2"
 }
